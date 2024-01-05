@@ -1,50 +1,21 @@
+<script>
+	import { Linkedin, Github, Mail } from 'lucide-svelte';
+</script>
 
-
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>By Renjie</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
-    <script defer src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"></script>
-</head>
-<body>
-    <section class="hero has-background-success-dark is-fullheight">
-        <div class="hero-body">
-            <div class="container is-fluid"></div>
-            <div class="container is-fluid">
-                <div>
-                    <p class="title has-text-primary-light">Tng Renjie</p>
-                    <p class="subtitle has-text-white-bis ml-1">
-                        Electrical & Electronic Engineering Undergraduate
-                    </p>
-                </div>
-                <div class="has-background-success-dark has-text-primary-light mt-2">
-                    <a class="has-text-primary-light" href="https://www.linkedin.com/in/tng-renjie/">
-                        <span class="icon-text">
-                            <span class="icon">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </span>
-                            <span>LinkedIn</span>
-                        </span>
-                    </a>
-                    <a class="has-text-primary-light" href="https://github.com/tngrj">
-                        <span class="icon-text">
-                            <span class="icon">
-                                <i class="fa-brands fa-github-alt"></i>
-                            </span>
-                            <span>Github</span>
-                        </span>
-                    </a>
-                    <a class="has-text-primary-light" href="mailto:rtng001@e.ntu.edu.sg">
-                        <span class="icon-text">
-                            <span class="icon">
-                                <i class="fa-regular fa-envelope"></i>
-                            </span>
-                            <span>Email</span>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-</body>
+<div class="text-white flex items-center justify-center h-full">
+	<div class="text-start">
+		<p class="text-4xl">Tng Renjie</p>
+		<p class="text-xl mt-2">Electrical & Electronic Engineering Undergraduate</p>
+		<div class="text-sm flex flex-row mt-2">
+			<a class="flex items-center align-middle mr-2" href="https://www.linkedin.com/in/tng-renjie/">
+				<Linkedin />&nbsp;LinkedIn
+			</a>
+			<a class="flex align-middle mr-2" href="https://github.com/tngrj">
+				<Github />&nbsp;Github
+			</a>
+			<a class="flex align-middle mr-2" href="mailto:rtng001@e.ntu.edu.sg">
+				<Mail />&nbsp;Email
+			</a>
+		</div>
+	</div>
+</div>
