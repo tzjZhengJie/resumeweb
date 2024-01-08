@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { TabAnchor, TabGroup, LightSwitch } from '@skeletonlabs/skeleton';
+	import { TabAnchor, TabGroup } from '@skeletonlabs/skeleton';
 	import { GanttChart, Home, User } from 'lucide-svelte';
 
 	const nav = 'flex flex-col items-center';
@@ -9,8 +9,8 @@
 <div>
 	<TabGroup
 		justify="justify-center"
-		active="bg-gradient-to-br variant-gradient-warning-success text-surface-600"
-		hover="hover:bg-gradient-to-br variant-gradient-warning-success text-surface-600"
+		active="bg-gradient-to-br variant-gradient-warning-success text-surface-600 dark:text-white"
+		hover="hover:bg-gradient-to-br variant-gradient-warning-success text-surface-600 dark:text-white"
 		flex="flex-1 lg:flex-none"
 		rounded="rounded-lg"
 		border="border-0 rounded-lg outline outline-offset-2 outline-primary-500"
@@ -43,8 +43,4 @@
 			</svelte:fragment>
 		</TabAnchor>
 	</TabGroup>
-</div>
-
-<div class="fixed top-8 right-8">
-	<LightSwitch />
 </div>
