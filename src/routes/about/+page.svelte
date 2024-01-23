@@ -2,12 +2,15 @@
 	<div class="flex flex-col text-start">
 		<h3 class="h3">Experience</h3>
 		<div class="mb-4">
-			<div class="flex flex-row">
-				<strong class="mr-2">Digitalisation / Automation Project Engineer</strong> -
-				<a class="anchor ml-2" href="https://www.infineon.com" target="_blank">
-					Infineon Technologies Asia Pacific Pte Ltd
-				</a>
-				<span class="ml-auto">May - Dec 2022</span>
+			<div class="flex flex-col sm:flex-row">
+				<strong class="mr-2">Digitalisation / Automation Project Engineer</strong>
+				<div class="hidden mx-2 sm:block">-</div>
+				<div>
+					<a class="anchor" href="https://www.infineon.com" target="_blank">
+						Infineon Technologies Asia Pacific Pte Ltd
+					</a>
+					<span class="ml-auto">May - Dec 2022</span>
+				</div>
 			</div>
 			<div>
 				<small>
@@ -55,12 +58,16 @@
 		</div>
 
 		<div class="mb-4">
-			<div class="flex flex-row">
-				<strong class="mr-2">Cybersecurity Software Researcher</strong> -
-				<a class="anchor ml-2" href="https://www.csit.gov.sg" target="_blank">
-					Centre for Strategic Infocomm Technologies
-				</a>
-				<span class="ml-auto">Mar - Apr 2019</span>
+			<div class="flex flex-col sm:flex-row">
+				<strong class="mr-2">Cybersecurity Software Researcher</strong>
+				<div class="flex flex-col sm:flex-row"></div>
+				<div class="hidden mx-2 sm:block">-</div>
+				<div>
+					<a class="anchor" href="https://www.csit.gov.sg" target="_blank">
+						Centre for Strategic Infocomm Technologies
+					</a>
+					<span class="ml-auto">Mar - Apr 2019</span>
+				</div>
 			</div>
 			<div>
 				<small>
@@ -82,19 +89,21 @@
 	<div class="flex flex-col text-start">
 		<h3 class="h3">Education</h3>
 		<div class="mb-4">
-			<div class="flex flex-row">
+			<div class="flex flex-col sm:flex-row">
 				<strong class="mr-2"
 					>Bachelor of Engineering (Electrical and Electronic Engineering)
 				</strong>
-				-
-				<a
-					class="anchor ml-2"
-					href="https://www.ntu.edu.sg/eee/admissions/programmes/undergraduate-programmes/detail/bachelor-of-engineering-in-electrical-and-electronic-engineering-(eee)"
-					target="_blank"
-				>
-					Nanyang Technological University
-				</a>
-				<span class="ml-auto">Aug 2021 - <strong>June 2024</strong></span>
+				<div class="hidden mx-2 sm:block">-</div>
+				<div>
+					<a
+						class="anchor"
+						href="https://www.ntu.edu.sg/eee/admissions/programmes/undergraduate-programmes/detail/bachelor-of-engineering-in-electrical-and-electronic-engineering-(eee)"
+						target="_blank"
+					>
+						Nanyang Technological University
+					</a>
+					<span class="ml-auto">Aug 2021 - <strong>June 2024</strong></span>
+				</div>
 			</div>
 			<div>
 				<small>
@@ -106,16 +115,19 @@
 			</div>
 		</div>
 		<div class="mb-4">
-			<div class="flex flex-row">
-				<strong class="mr-2">Diploma in Electrical Engineering</strong> -
-				<a
-					class="anchor ml-2"
-					href="https://www.np.edu.sg/schools-courses/academic-schools/school-of-engineering/diploma-in-electrical-engineering"
-					target="_blank"
-				>
-					Ngee Ann Polytechnic
-				</a>
-				<span class="ml-auto">Apr 2016 - May 2019</span>
+			<div class="flex flex-col sm:flex-row">
+				<strong class="mb-2 sm:mr-2 sm:mb-0">Diploma in Electrical Engineering</strong>
+				<div class="hidden mx-2 sm:block">-</div>
+				<div>
+					<a
+						class="anchor"
+						href="https://www.np.edu.sg/schools-courses/academic-schools/school-of-engineering/diploma-in-electrical-engineering"
+						target="_blank"
+					>
+						Ngee Ann Polytechnic
+					</a>
+					<span class="ml-auto sm:ml-auto">Apr 2016 - May 2019</span>
+				</div>
 			</div>
 			<div>
 				<small>
