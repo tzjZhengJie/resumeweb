@@ -1,4 +1,4 @@
-<div class="container mx-auto max-w-5xl text-white">
+<div class="container mx-auto max-w-5xl text-white px-8 sm:px-0">
 	<div class="flex flex-col text-start">
 		<h3 class="h3">Experience</h3>
 		<div class="mb-4">
@@ -126,6 +126,9 @@
 				</small>
 			</div>
 		</div>
+	</div>
+	<div class="flex justify-center items-center mt-10">
+		<a class="anchor" href="/Resume (Tng Renjie).pdf">Download a copy of my CV</a>
 	</div>
 </div>
 
