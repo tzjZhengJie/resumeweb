@@ -4,7 +4,7 @@
 	const links = 'flex items-center mb-2 sm:mb-0 sm:mr-2';
 </script>
 
-<div class="text-white flex items-center justify-center h-full">
+<div class="text-white flex items-center justify-center h-full px-4 sm:px-0">
 	<div class="text-start">
 		<p class="text-2xl sm:text-4xl">Tng Renjie</p>
 		<p class="text-lg sm:text-xl mt-2">Electrical & Electronic Engineering Undergraduate</p>
