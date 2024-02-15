@@ -94,16 +94,14 @@
 					>Bachelor of Engineering (Electrical and Electronic Engineering)
 				</strong>
 				<div class="hidden mx-2 sm:block">-</div>
-				<div>
-					<a
-						class="anchor"
-						href="https://www.ntu.edu.sg/eee/admissions/programmes/undergraduate-programmes/detail/bachelor-of-engineering-in-electrical-and-electronic-engineering-(eee)"
-						target="_blank"
-					>
-						Nanyang Technological University
-					</a>
-					<span class="ml-auto">Aug 2021 - <strong>June 2024</strong></span>
-				</div>
+				<a
+					class="anchor"
+					href="https://www.ntu.edu.sg/eee/admissions/programmes/undergraduate-programmes/detail/bachelor-of-engineering-in-electrical-and-electronic-engineering-(eee)"
+					target="_blank"
+				>
+					Nanyang Technological University
+				</a>
+				<span class="ml-auto">Aug 2021 - <strong>June 2024</strong></span>
 			</div>
 			<div>
 				<small>
