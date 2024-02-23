@@ -1,21 +1,21 @@
 <div class="container mx-auto max-w-5xl text-white px-8 sm:px-0">
 	<div class="flex flex-col text-start">
-		<h3 class="h3">Experience</h3>
+		<h3 class="h3 underline">Experience</h3>
+
 		<div class="mb-4">
 			<div class="flex flex-col sm:flex-row">
 				<strong class="mr-2">Digitalisation / Automation Project Engineer</strong>
 				<div class="hidden mx-2 sm:block">-</div>
-				<div>
-					<a class="anchor" href="https://www.infineon.com" target="_blank">
-						Infineon Technologies Asia Pacific Pte Ltd
-					</a>
-					<span class="ml-auto">May - Dec 2022</span>
-				</div>
+				<a class="anchor" href="https://www.infineon.com" target="_blank">
+					Infineon Technologies Asia Pacific Pte Ltd
+				</a>
+				<span class="mt-2 sm:mt-0 sm:ml-auto">May - Dec 2022</span>
 			</div>
 			<div>
 				<small>
 					<em>
-						<strong>Technologies:</strong> HTML, CSS, JavaScript, jQuery, MySQL, Python, Flask
+						<strong>Technologies:</strong> HTML, CSS, JavaScript, jQuery, MySQL, Python, Flask, Red Hat
+						OpenShift
 					</em>
 				</small>
 			</div>
@@ -24,7 +24,7 @@
 					<li>
 						<span>•</span>
 						<span class="flex-auto">
-							Contributed to the development of an inventory database web application, including
+							Contributed to the development of inventory database web application, including
 							potential future expansion
 						</span>
 					</li>
@@ -34,9 +34,17 @@
 					</li>
 					<li>
 						<span>•</span>
+						<span class="flex-auto"
+							>Used Flask-Login to provide Role-Based Access Control (RBAC) for secure access
+							management</span
+						>
+					</li>
+					<li>
+						<span>•</span>
 						<span class="flex-auto">
-							Led the full project lifecycle, delivering the project one month ahead of schedule
-							<strong>(KLUSA)</strong>
+							Led the full project lifecycle utilising project management software, <strong
+								>(KLUSA)</strong
+							>, delivering the project one month ahead of schedule
 						</span>
 					</li>
 					<li>
@@ -62,12 +70,11 @@
 				<strong class="mr-2">Cybersecurity Software Researcher</strong>
 				<div class="flex flex-col sm:flex-row"></div>
 				<div class="hidden mx-2 sm:block">-</div>
-				<div>
-					<a class="anchor" href="https://www.csit.gov.sg" target="_blank">
-						Centre for Strategic Infocomm Technologies
-					</a>
-					<span class="ml-auto">Mar - Apr 2019</span>
-				</div>
+
+				<a class="anchor" href="https://www.csit.gov.sg" target="_blank">
+					Centre for Strategic Infocomm Technologies
+				</a>
+				<span class="mt-2 sm:mt-0 sm:ml-auto">Mar - Apr 2019</span>
 			</div>
 			<div>
 				<small>
@@ -80,14 +87,14 @@
 				<ul class="list">
 					<li>
 						<span>•</span>
-						<span class="flex-auto"> Design and develop in-house software </span>
+						<span class="flex-auto"> Designed and developed in-house software </span>
 					</li>
 				</ul>
 			</div>
 		</div>
 	</div>
 	<div class="flex flex-col text-start">
-		<h3 class="h3">Education</h3>
+		<h3 class="h3 underline">Education</h3>
 		<div class="mb-4">
 			<div class="flex flex-col sm:flex-row">
 				<strong class="mr-2"
@@ -101,13 +108,14 @@
 				>
 					Nanyang Technological University
 				</a>
-				<span class="ml-auto">Aug 2021 - <strong>June 2024</strong></span>
+				<span class="mt-2 sm:mt-0 sm:ml-auto">Aug 2021 - <strong>June 2024</strong></span>
 			</div>
 			<div>
 				<small>
 					<em>
 						<strong>Relevant Modules:</strong> Data Structures & Algorithms, Introduction to Data Science
-						& AI, Computer Communications, Signals and Systems
+						& Artificial Intelligence, Artificial Intelligence & Data Mining, Machine Learning Design
+						& Application, Web Application Design, Software Engineering, Database Systems, Computer Communications
 					</em>
 				</small>
 			</div>
@@ -116,24 +124,15 @@
 			<div class="flex flex-col sm:flex-row">
 				<strong class="mb-2 sm:mr-2 sm:mb-0">Diploma in Electrical Engineering</strong>
 				<div class="hidden mx-2 sm:block">-</div>
-				<div>
-					<a
-						class="anchor"
-						href="https://www.np.edu.sg/schools-courses/academic-schools/school-of-engineering/diploma-in-electrical-engineering"
-						target="_blank"
-					>
-						Ngee Ann Polytechnic
-					</a>
-					<span class="ml-auto sm:ml-auto">Apr 2016 - May 2019</span>
-				</div>
-			</div>
-			<div>
-				<small>
-					<em>
-						<strong>Relevant Modules:</strong> Programming in C, Microcontroller and System, Digital
-						Electronics, Digital Systems and Analysis, PC Networking
-					</em>
-				</small>
+
+				<a
+					class="anchor"
+					href="https://www.np.edu.sg/schools-courses/academic-schools/school-of-engineering/diploma-in-electrical-engineering"
+					target="_blank"
+				>
+					Ngee Ann Polytechnic
+				</a>
+				<span class="mt-2 sm:mt-0 sm:ml-auto">Apr 2016 - May 2019</span>
 			</div>
 		</div>
 	</div>

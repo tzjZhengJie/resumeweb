@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   lucide-svelte:
-    specifier: ^0.303.0
-    version: 0.303.0(svelte@4.2.8)
+    specifier: ^0.338.0
+    version: 0.338.0(svelte@4.2.8)
 
 devDependencies:
   '@skeletonlabs/skeleton':
@@ -1706,10 +1706,10 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /lucide-svelte@0.303.0(svelte@4.2.8):
-    resolution: {integrity: sha512-Lt5kH3pGSSQdFDgL+y09xkp8FCGm7pQBdxmRxdpA0/im5AHl6WGDECWdiB4dnBCp8njOgWd0TaSqgkL0dF0efg==}
+  /lucide-svelte@0.338.0(svelte@4.2.8):
+    resolution: {integrity: sha512-A6NxbwRxbsbgzYBPNkQccu/dD5HP630hEmop4Xz/ya0JDL3h1dVJp+LCtkMEEqEkN4VcdvE2CeQzCvWFIV4iRA==}
     peerDependencies:
-      svelte: '>=3 <5'
+      svelte: ^3 || ^4 || ^5.0.0-next.42
     dependencies:
       svelte: 4.2.8
     dev: false
