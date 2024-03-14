@@ -2,6 +2,7 @@
 	import { TabAnchor, TabGroup } from '@skeletonlabs/skeleton';
 	import { GanttChart, Home, User } from 'lucide-svelte';
 	import { base } from '$app/paths';
+	import { page } from '$app/stores';
 
 	const nav = 'flex flex-col items-center';
 </script>
@@ -16,7 +17,8 @@
 		border="border-0 rounded-lg outline outline-offset-2 outline-primary-500"
 		class="text-surface-600-300-token rounded-lg fixed z-50 -translate-x-1/2 bottom-10 left-1/2 bg-surface-300-600-token w-auto"
 	>
-		<TabAnchor class="small-tab" href="{base}/">
+		<!-- <TabAnchor class="small-tab" href="{base}" selected={$page.url.pathname === base}> -->
+		<TabAnchor class="small-tab" href="/" selected={$page.url.pathname === base}>
 			<svelte:fragment slot="lead">
 				<div class={nav}>
 					<Home />
@@ -25,7 +27,7 @@
 			</svelte:fragment>
 		</TabAnchor>
 		<span class="mx-2"></span>
-		<TabAnchor class="small-tab" href="{base}/project">
+		<TabAnchor class="small-tab" href="{`${base}/project`}" selected={$page.url.pathname === `${base}/project`}>
 			<svelte:fragment slot="lead">
 				<div class={nav}>
 					<GanttChart />
@@ -34,7 +36,7 @@
 			</svelte:fragment>
 		</TabAnchor>
 		<span class="mx-2"></span>
-		<TabAnchor class="small-tab" href="{base}/about">
+		<TabAnchor class="small-tab" href="{`${base}/about`}" selected={$page.url.pathname === `${base}/about`}>
 			<svelte:fragment slot="lead">
 				<div class={nav}>
 					<User />
