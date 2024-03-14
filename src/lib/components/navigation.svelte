@@ -17,8 +17,8 @@
 		border="border-0 rounded-lg outline outline-offset-2 outline-primary-500"
 		class="text-surface-600-300-token rounded-lg fixed z-50 -translate-x-1/2 bottom-10 left-1/2 bg-surface-300-600-token w-auto"
 	>
-		<!-- <TabAnchor class="small-tab" href="{base}" selected={$page.url.pathname === base}> -->
-		<TabAnchor class="small-tab" href="/" selected={$page.url.pathname === base}>
+		<TabAnchor class="small-tab" href="{base}" selected={$page.url.pathname === base}>
+		<!-- <TabAnchor class="small-tab" href="/" selected={$page.url.pathname === base}> -->
 			<svelte:fragment slot="lead">
 				<div class={nav}>
 					<Home />
