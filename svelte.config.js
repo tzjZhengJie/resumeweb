@@ -10,7 +10,7 @@ const config = {
  kit: {
   adapter: adapter(),
   paths: {
-   base: ''
+   base: process.env.NODE_ENV === 'production' ? '/resume-website' : ''
   }
  }
 };
