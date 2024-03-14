@@ -1,150 +1,581 @@
-<div class="container mx-auto max-w-5xl text-white px-8 sm:px-0">
-	<div class="flex flex-col text-start">
-		<h3 class="h3 underline">Experience</h3>
+<script lang="ts">
+	import { TreeView, TreeViewItem } from '@skeletonlabs/skeleton';
+	import {
+		GraduationCap,
+		FolderKanban,
+		BookOpenCheck,
+		ArrowRight,
+		Briefcase,
+		BarChart,
+		BookPlus,
+		UserRoundSearch,
+		Github,
+		Youtube
+	} from 'lucide-svelte';
+</script>
 
-		<div class="mb-4">
-			<div class="flex flex-col sm:flex-row">
-				<strong class="mr-2">Digitalisation / Automation Project Engineer</strong>
-				<div class="hidden mx-2 sm:block">-</div>
-				<a class="anchor" href="https://www.infineon.com" target="_blank">
-					Infineon Technologies Asia Pacific Pte Ltd
-				</a>
-				<span class="mt-2 sm:mt-0 sm:ml-auto">May - Dec 2022</span>
+<div class="container-center mx-auto max-w-6xl text-white px-8 sm:px-0 mt-20">
+	<TreeView>
+		<TreeViewItem>
+			<div class="flex items-center">
+				<span class="mr-4">
+					<UserRoundSearch />
+				</span>
+				<b class="text-lg">About Me</b>
 			</div>
-			<div>
-				<small>
-					<em>
-						<strong>Technologies:</strong> HTML, CSS, JavaScript, jQuery, MySQL, Python, Flask, Red Hat
-						OpenShift
-					</em>
-				</small>
+			<svelte:fragment slot="children">
+				<TreeViewItem>
+					<div class="container flex flex-col">
+						<ul class="list-disc list-inside">
+							<li class="text-base text-justify">
+								My passion for data analytics was ignited by my keen interest in investments.
+							</li>
+							<li class="text-base mt-3 text-justify">
+								I developed my own hypotheses on the stocks I was interested in and explored
+							</li>
+							<p class="text-base pl-5">it further in-depth.</p>
+							<li class="text-base mt-3 text-justify">
+								I enjoyed extracting data from various sources, tracking companies' financial
+							</li>
+							<p class="text-base pl-5">
+								performance, stock valuations, and creating personalised portfolio dashboards.
+							</p>
+							<li class="text-base mt-3 text-justify">
+								I enjoy pitching my investment ideas to my close friends, telling them the
+							</li>
+							<p class="text-base pl-5">insights that I have discovered.</p>
+							<li class="text-base mt-3 text-justify">
+								Through this process, I realised that I was essentially performing the role of
+							</li>
+							<p class="text-base pl-5">
+								a data analyst, which then fuel my desire to pursue this field professionally.
+							</p>
+						</ul>
+					</div>
+				</TreeViewItem>
+			</svelte:fragment>
+		</TreeViewItem>
+	</TreeView>
+	<!--  -->
+	<TreeView>
+		<TreeViewItem>
+			<div class="flex items-center">
+				<span class="mr-4">
+					<GraduationCap />
+				</span>
+				<b class="text-lg">Nanyang Technological University (June 2024 - Graduate)</b>
 			</div>
-			<div class="my-2">
-				<ul class="list">
-					<li>
-						<span>•</span>
-						<span class="flex-auto">
-							Contributed to the development of inventory database web application, including
-							potential future expansion
+			<svelte:fragment slot="children">
+				<TreeViewItem>
+					<div class="flex items-center">
+						<span class="mr-4">
+							<BookOpenCheck />
 						</span>
-					</li>
-					<li>
-						<span>•</span>
-						<span class="flex-auto">Boosted productivity by digitalizing internal processes</span>
-					</li>
-					<li>
-						<span>•</span>
-						<span class="flex-auto"
-							>Used Flask-Login to provide Role-Based Access Control (RBAC) for secure access
-							management</span
+						<b class="text-lg"
+							>Bachelor of Engineering, Electrical and Electronic Engineering, Honours</b
 						>
-					</li>
-					<li>
-						<span>•</span>
-						<span class="flex-auto">
-							Led the full project lifecycle utilising project management software, <strong
-								>(KLUSA)</strong
-							>, delivering the project one month ahead of schedule
+					</div>
+					<svelte:fragment slot="children">
+						<TreeViewItem>
+							<div class="container">
+								<div class="label"><b class="text-lg">Specialisation:</b></div>
+								<div class="label"><b>Info-communication Engineering: </b></div>
+								<ul class="list-disc list-inside">
+									<li class="text-base">Data Intelligence & Processing</li>
+									<li class="text-base">Computer Engineering</li>
+								</ul>
+							</div>
+						</TreeViewItem>
+						<TreeViewItem>
+							<div class="container">
+								<div class="label"><b class="text-lg">Relevant Modules:</b></div>
+								<ul class="list-disc list-inside">
+									<li class="text-base">Database Systems</li>
+									<li class="text-base">Artificial Intelligence & Data Mining</li>
+									<li class="text-base">Pattern Recognition & Deep Learning</li>
+									<li class="text-base">Machine Learning Design & Application</li>
+									<li class="text-base">Introduction to Data Science & AI</li>
+									<li class="text-base">Computer Communication</li>
+									<li class="text-base">Digital Signal Processing</li>
+								</ul>
+							</div>
+						</TreeViewItem>
+					</svelte:fragment>
+				</TreeViewItem>
+			</svelte:fragment>
+		</TreeViewItem>
+	</TreeView>
+
+	<TreeView>
+		<TreeViewItem>
+			<div class="flex items-center">
+				<span class="mr-4">
+					<FolderKanban />
+				</span>
+				<b class="text-lg">Academic Experiences</b>
+			</div>
+			<svelte:fragment slot="children">
+				<TreeViewItem>
+					<b class="text-lg">Projects</b>
+					<svelte:fragment slot="children">
+						<TreeViewItem>
+							<div class="flex items-center">
+								<span class="mr-1">
+									<ArrowRight />
+								</span>
+								<b class="text-base cursor-pointer">
+									Final Year Project, Enhancing portfolio’s performance with S-REIT Analysis
+								</b>
+							</div>
+							<svelte:fragment slot="children">
+								<TreeViewItem>
+									<ul class="list-disc list-inside">
+										<li class="text-base mt-2 cursor-pointer">
+											Employed fundamental, technical, and news analysis techniques to evaluate
+											S-REITs
+										</li>
+
+										<li class="text-base mt-2 cursor-pointer">
+											Developed portfolio's weight optimisation with Pandas, NumPy, and Scipy
+										</li>
+
+										<li class="text-base mt-2 cursor-pointer hanging-indent">
+											Utilised Python and Pandas to perform news analysis on S-REITs (Price action
+											after dividends, FED meetings, earnings report, etc.)
+										</li>
+
+										<li class="text-base mt-2 cursor-pointer">
+											Libraries Utilised: Pandas, NumPy, Matplotlib, Scipyy, yfinance
+										</li>
+
+										<li class="text-base mt-2 cursor-pointer">
+											Financial Skills: DCF Valuation Models, Pinescript, Macroeconomics
+										</li>
+
+										<li class="text-base mt-2 cursor-pointer">
+											Designing Skills: Design DCF Models dashboard on Google Sheet
+										</li>
+									</ul>
+								</TreeViewItem>
+							</svelte:fragment>
+						</TreeViewItem>
+						<!--  -->
+						<TreeViewItem>
+							<div class="flex items-center">
+								<span class="mr-1">
+									<ArrowRight />
+								</span>
+								<b class="text-base cursor-pointer"> Cardiovascular Disease Prediction </b>
+							</div>
+							<svelte:fragment slot="children">
+								<TreeViewItem>
+									<ul class="list-disc list-inside">
+										<li class="text-base mt-3 cursor-pointer hanging-indent">
+											Utilised machine learning models to predict the likelihood of developing
+											cardiovascular diseases by leveraging relevant variables such as blood
+											pressure, cholesterol levels, age, and fitness indicators
+										</li>
+
+										<li class="text-base mt-3 cursor-pointer hanging-indent">
+											Employed data preprocessing techniques, feature engineering, and model
+											selection strategies to optimise predictive performance
+										</li>
+
+										<li class="text-base mt-3 cursor-pointer hanging-indent">
+											Evaluated and compared the accuracy of various algorithms, including logistic
+											regression, decision trees, and ensemble methods
+										</li>
+
+										<li class="text-base mt-3 cursor-pointer hanging-indent">
+											Implemented the models using Python and libraries like Pandas, Scikit-learn,
+											and Matplotlib
+										</li>
+									</ul>
+								</TreeViewItem>
+							</svelte:fragment>
+						</TreeViewItem>
+						<TreeViewItem>
+							<div class="flex items-center">
+								<span class="mr-1">
+									<ArrowRight />
+								</span>
+								<b class="text-base cursor-pointer"> Web Application Design </b>
+							</div>
+							<svelte:fragment slot="children">
+								<TreeViewItem>
+									<ul class="list-disc list-inside">
+										<li class="text-base mt-3 cursor-pointer hanging-indent">
+											Developed an e-commerce platform specialising in the sale of fruit products,
+											encompassing features
+										</li>
+										<p class="text-base pl-5">
+											such as user authentication, input validation, product catalog, shopping cart,
+											checkout process, and
+										</p>
+										<p class="text-base pl-5">an administrative control panel</p>
+
+										<li class="text-base mt-3 cursor-pointer hanging-indent">
+											Spearheaded the entire backend development process, leveraging MySQL for
+											robust database creation and
+										</li>
+										<p class="text-base pl-5">management.</p>
+
+										<li class="text-base mt-3 cursor-pointer hanging-indent">
+											Implemented PHP scripts to facilitate seamless communication between the
+											backend and the database,
+										</li>
+										<p class="text-base pl-5">ensuring efficient data retrieval and storage</p>
+
+										<li class="text-base mt-3 cursor-pointer hanging-indent">
+											Utilised HTML/CSS for structuring and styling the user interface, JavaScript
+											for enhancing
+										</li>
+										<p class="text-base pl-5">
+											front-end interactivity, and PHP for server-side scripting
+										</p>
+									</ul>
+								</TreeViewItem>
+							</svelte:fragment>
+						</TreeViewItem>
+						<!--  -->
+						<TreeViewItem>
+							<div class="flex items-center">
+								<span class="mr-1">
+									<ArrowRight />
+								</span>
+								<b class="text-base cursor-pointer"> Stock Trading with Machine Learning </b>
+							</div>
+							<svelte:fragment slot="children">
+								<TreeViewItem>
+									<ul class="list-disc list-inside">
+										<li class="text-base mt-3 cursor-pointer hanging-indent">
+											Utilise FinRL library and deploy DRL (DDPG,TD3) model to predict stock price.
+										</li>
+
+										<li class="text-base mt-3 cursor-pointer hanging-indent">
+											Prepared the data with Pandas for training and testing the model
+										</li>
+
+										<li class="text-base mt-3 cursor-pointer hanging-indent">
+											Visualised the cumulative returns data with Matplotlib
+										</li>
+
+										<li class="text-base mt-3 cursor-pointer hanging-indent">
+											Pitch on our understanding and findings to 5 professors in the field of AI.
+										</li>
+									</ul>
+								</TreeViewItem>
+							</svelte:fragment>
+						</TreeViewItem>
+					</svelte:fragment>
+				</TreeViewItem>
+				<!--  -->
+				<TreeViewItem>
+					<b class="text-lg">Hackathon</b>
+					<svelte:fragment slot="children">
+						<TreeViewItem>
+							<div class="flex items-center">
+								<span class="mr-1">
+									<ArrowRight />
+								</span>
+								<b class="text-base cursor-pointer">
+									Google-NTU Tech4Tomorrow Hackathon (Mar 2024)
+								</b>
+							</div>
+							<svelte:fragment slot="children">
+								<TreeViewItem>
+									<ul class="list-disc list-inside">
+										<li class="text-base mt-3 cursor-pointer hanging-indent">
+											<b>Led a team of 5 members</b> in conducting research on the social impact of
+											economic uncertainty and developing a product solution, advancing to the
+											<b>finalist round</b>
+											and securing a <b>second runner-up</b> among 24 teams.
+										</li>
+
+										<li class="text-base mt-3 cursor-pointer hanging-indent">
+											Orchestrated the development of a resume-job matching platform tailored for
+											retrenched middle-aged professionals, overseeing the full project lifecycle
+											from research to product delivery
+										</li>
+
+										<li class="text-base mt-3 cursor-pointer hanging-indent">
+											Implemented web scraping, data cleaning, job-matching algorithms, and prompt
+											engineering to create a one-stop career portal web application as the product
+											solution
+										</li>
+
+										<li class="text-base mt-3 cursor-pointer hanging-indent">
+											Leveraged AI technologies such as Vertex API, Natural Language Processing, and
+											Classification to enhance the product's functionality
+										</li>
+
+										<li class="text-base mt-3 cursor-pointer hanging-indent">
+											Presented the final product to a judging panel comprising directors from
+											Google and an AI-Researcher professor from Nanyang Technological University
+										</li>
+
+										<li class="text-base mt-3 cursor-pointer hanging-indent">
+											Utilised Python libraries such as NumPy, Pandas, BeautifulSoup, Scikit-learn
+											(Cosine similarity, TfidfVectorizer)
+										</li>
+										<li class="text-base mt-3 cursor-pointer hanging-indente">
+											<div class="inline-flex items-center space-x-2">
+												<span class="mr-2">For more info, visit:</span>
+												<a
+													href="https://github.com/tngrj/NTU-Google-Hackathon"
+													target="_blank"
+													class="mr-2"
+												>
+													<Github />
+												</a>
+												<a href="https://youtu.be/U619sMGSxx8" target="_blank">
+													<Youtube />
+												</a>
+											</div>
+										</li>
+									</ul>
+								</TreeViewItem>
+							</svelte:fragment>
+						</TreeViewItem>
+					</svelte:fragment>
+				</TreeViewItem>
+			</svelte:fragment>
+		</TreeViewItem>
+	</TreeView>
+	<!--  -->
+	<TreeView>
+		<TreeViewItem>
+			<div class="flex items-center">
+				<span class="mr-4">
+					<Briefcase />
+				</span>
+				<b class="text-lg">Internship Experiences</b>
+			</div>
+			<svelte:fragment slot="children">
+				<TreeViewItem>
+					<div class="flex items-center">
+						<span class="mr-1">
+							<ArrowRight />
 						</span>
-					</li>
-					<li>
-						<span>•</span>
-						<span class="flex-auto"
-							>Refined the project code structure for improved readability and scalability with the
-							use of Flask Blueprints</span
-						>
-					</li>
-					<li>
-						<span>•</span>
-						<span class="flex-auto">
-							Raised awareness of the project by creating informative posters, publications, and
-							presentations for internal use
+						<b class="text-lg">Software Engineer, Robotics (Jun 2022 – Dec 2022)</b>
+					</div>
+					<svelte:fragment slot="children">
+						<TreeViewItem>
+							<ul class="list-disc list-inside">
+								<li class="text-base mt-3 cursor-pointer hanging-indent">
+									<b
+										>Awarded with the “Intern@ST” award for outstanding performance and capability</b
+									>
+								</li>
+
+								<li class="text-base mt-3 cursor-pointer hanging-indent">
+									Assisted engineers with the development of self-automated drone with the use of
+									ROS library and C++ programming
+								</li>
+
+								<li class="text-base mt-3 cursor-pointer hanging-indent">
+									Implemented sensors for navigation and set-up the environment for software
+									development usage
+								</li>
+
+								<li class="text-base mt-3 cursor-pointer hanging-indent">
+									Acquired softskills such as presenting project to the management and working in a
+									fast-pace environment.
+								</li>
+
+								<li class="text-base mt-3 cursor-pointer hanging-indent">
+									Skills acquired: ROS, C++, Git, Linux
+								</li>
+							</ul>
+						</TreeViewItem>
+					</svelte:fragment>
+				</TreeViewItem>
+				<TreeViewItem>
+					<div class="flex items-center">
+						<span class="mr-1">
+							<ArrowRight />
 						</span>
-					</li>
-				</ul>
-			</div>
-		</div>
+						<b class="text-lg">Robotics Engineer (Sep 2018 – Feb 2019)</b>
+					</div>
+					<svelte:fragment slot="children">
+						<TreeViewItem>
+							<ul class="list-disc list-inside">
+								<li class="text-base mt-3 cursor-pointer hanging-indent">
+									Chosen by the lecturer to participate in a collaborative internship project
+									between ST Engineering and Ngee Ann Polytechnic, focused on developing a
+									following-user feature and a self-balancing rover
+								</li>
 
-		<div class="mb-4">
-			<div class="flex flex-col sm:flex-row">
-				<strong class="mr-2">Cybersecurity Software Researcher</strong>
-				<div class="flex flex-col sm:flex-row"></div>
-				<div class="hidden mx-2 sm:block">-</div>
+								<li class="text-base mt-3 cursor-pointer hanging-indent">
+									Constructed the self-balancing rover by applying C programming (Arduino IDE) with
+									a PID algorithm and leveraging an IMU sensor for balance control
+								</li>
 
-				<a class="anchor" href="https://www.csit.gov.sg" target="_blank">
-					Centre for Strategic Infocomm Technologies
-				</a>
-				<span class="mt-2 sm:mt-0 sm:ml-auto">Mar - Apr 2019</span>
+								<li class="text-base mt-3 cursor-pointer hanging-indent">
+									Integrated and synchronised C++ code (Orbecc SDK) with a 3D camera to enable the
+									following-user feature, allowing the rover to autonomously track and follow a
+									designated user
+								</li>
+							</ul>
+						</TreeViewItem>
+					</svelte:fragment>
+				</TreeViewItem>
+			</svelte:fragment>
+		</TreeViewItem>
+	</TreeView>
+	<!--  -->
+	<TreeView>
+		<TreeViewItem>
+			<div class="flex items-center">
+				<span class="mr-4">
+					<BookPlus />
+				</span>
+				<b class="text-lg">Online Courses</b>
 			</div>
-			<div>
-				<small>
-					<em>
-						<strong>Technologies:</strong> HTML, CSS, JavaScript
-					</em>
-				</small>
-			</div>
-			<div class="my-2">
-				<ul class="list">
-					<li>
-						<span>•</span>
-						<span class="flex-auto"> Designed and developed in-house software </span>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="flex flex-col text-start">
-		<h3 class="h3 underline">Education</h3>
-		<div class="mb-4">
-			<div class="flex flex-col sm:flex-row">
-				<strong class="mr-2"
-					>Bachelor of Engineering (Electrical and Electronic Engineering)
-				</strong>
-				<div class="hidden mx-2 sm:block">-</div>
-				<a
-					class="anchor"
-					href="https://www.ntu.edu.sg/eee/admissions/programmes/undergraduate-programmes/detail/bachelor-of-engineering-in-electrical-and-electronic-engineering-(eee)"
-					target="_blank"
-				>
-					Nanyang Technological University
-				</a>
-				<span class="mt-2 sm:mt-0 sm:ml-auto">Aug 2021 - <strong>June 2024</strong></span>
-			</div>
-			<div>
-				<small>
-					<em>
-						<strong>Relevant Modules:</strong> Data Structures & Algorithms, Introduction to Data Science
-						& Artificial Intelligence, Artificial Intelligence & Data Mining, Machine Learning Design
-						& Application, Web Application Design, Software Engineering, Database Systems, Computer Communications
-					</em>
-				</small>
-			</div>
-		</div>
-		<div class="mb-4">
-			<div class="flex flex-col sm:flex-row">
-				<strong class="mb-2 sm:mr-2 sm:mb-0">Diploma in Electrical Engineering</strong>
-				<div class="hidden mx-2 sm:block">-</div>
+			<svelte:fragment slot="children">
+				<TreeViewItem>
+					<div class="flex items-center">
+						<span class="mr-1">
+							<ArrowRight />
+						</span>
+						<b class="text-lg">Google Advanced Data Analytics Specialisation</b>
+					</div>
+					<svelte:fragment slot="children">
+						<TreeViewItem>
+							<ul class="list-disc list-inside">
+								<li class="text-base mt-3 cursor-pointer hanging-indent">
+									Create data visualisations and apply statistical methods to investigate data
+								</li>
 
-				<a
-					class="anchor"
-					href="https://www.np.edu.sg/schools-courses/academic-schools/school-of-engineering/diploma-in-electrical-engineering"
-					target="_blank"
-				>
-					Ngee Ann Polytechnic
-				</a>
-				<span class="mt-2 sm:mt-0 sm:ml-auto">Apr 2016 - May 2019</span>
+								<li class="text-base mt-3 cursor-pointer hanging-indent">
+									Build regression and machine learning models to analyze and interpret data
+								</li>
+
+								<li class="text-base mt-3 cursor-pointer hanging-indent">
+									Communicate insights (STAR: Situation, Task, Action, and Result) from data
+									analysis to stakeholders
+								</li>
+
+								<li class="text-base mt-3 cursor-pointer hanging-indent">
+									<div class="inline-flex items-center space-x-2" style="padding-left: 1rem;">
+										<span class="mr-3">For more info, visit:</span>
+										<a
+											href="https://github.com/tzjZhengJie/DataAnalyst_Project/tree/Python/Advanced_Google_Data_Analytics"
+											target="_blank"
+											class="mr-2"
+										>
+											<Github />
+										</a>
+									</div>
+								</li>
+							</ul>
+						</TreeViewItem>
+					</svelte:fragment>
+				</TreeViewItem>
+				<TreeViewItem>
+					<div class="flex items-center">
+						<span class="mr-1">
+							<ArrowRight />
+						</span>
+						<b class="text-lg">Google Data Analytics Specialisation</b>
+					</div>
+					<svelte:fragment slot="children">
+						<TreeViewItem>
+							<ul class="list-disc list-inside">
+								<li class="text-base mt-3 cursor-pointer hanging-indent">
+									Learn key analytical skills (data cleaning, analysis, & visualisation) and tools
+									(spreadsheets, SQL, R programming, Tableau)
+								</li>
+
+								<li class="text-base mt-3 cursor-pointer hanging-indent">
+									Understand how to clean and organise data for analysis, and complete analysis and
+									calculations using spreadsheets, SQL and R programming
+								</li>
+
+								<li class="text-base mt-3 cursor-pointer hanging-indent">
+									Learn how to visualize and present data findings in dashboards, presentations and
+									commonly used visualization platforms
+								</li>
+							</ul>
+						</TreeViewItem>
+					</svelte:fragment>
+				</TreeViewItem>
+				<TreeViewItem>
+					<div class="flex items-center">
+						<span class="mr-1">
+							<ArrowRight />
+						</span>
+						<b class="text-lg">Google Business Intelligence Professional Specialisation</b>
+					</div>
+					<svelte:fragment slot="children">
+						<TreeViewItem>
+							<ul class="list-disc list-inside">
+								<li class="text-base mt-3 cursor-pointer hanging-indent">
+									Practice data modeling and extract, transform, load (ETL) processes that meet
+									organisational goals
+								</li>
+
+								<li class="text-base mt-3 cursor-pointer hanging-indent">
+									Design data visualizations that answer business questions
+								</li>
+
+								<li class="text-base mt-3 cursor-pointer hanging-indent">
+									Create dashboards that effectively communicate data insights to stakeholders
+								</li>
+							</ul>
+						</TreeViewItem>
+					</svelte:fragment>
+				</TreeViewItem>
+			</svelte:fragment>
+		</TreeViewItem>
+	</TreeView>
+	<!--  -->
+	<TreeView>
+		<TreeViewItem>
+			<div class="flex items-center">
+				<span class="mr-4">
+					<BarChart />
+				</span>
+				<b class="text-lg">Skills</b>
 			</div>
-		</div>
-	</div>
-	<div class="flex justify-center items-center mt-10">
-		<a class="anchor" href="/Resume (Tng Renjie).pdf">Download a copy of my CV</a>
-	</div>
+			<svelte:fragment slot="children">
+				<TreeViewItem>
+					<ul class="list-disc list-inside mb-1">
+						<li class="text-base mt-3 cursor-pointer hanging-indent">
+							Languages: Fluent in English and Chinese (Mandarin)
+						</li>
+
+						<li class="text-base mt-3 cursor-pointer hanging-indent">
+							Software Programming: Python, R, MySQL, C, C++, HTML/CSS, PHP, JS
+						</li>
+
+						<li class="text-base mt-3 cursor-pointer hanging-indent">
+							Libraries: Pandas, PyTorch, NumPy, Scikit-learn, Matplotlib
+						</li>
+
+						<li class="text-base mt-3 cursor-pointer hanging-indent">
+							Development Tools: Jupyter Notebook, VSCode, Anaconda, CodeBlock, Arduino IDE, LabVIEW
+						</li>
+
+						<li class="text-base mt-3 cursor-pointer hanging-indent">
+							Software Application: Microsoft Excel, Words, Office, AutoCAD, Adobe Premiere Pro,
+							Adobe Lightroom
+						</li>
+
+						<li class="text-base mt-3 cursor-pointer hanging-indent">OS: Windows, Linux3</li>
+					</ul>
+				</TreeViewItem>
+			</svelte:fragment>
+		</TreeViewItem>
+	</TreeView>
+	<!-- <p class="text-lg justify mt-2">Storytelling, Critical Thinking, Problem Solving</p>
+	<h1 class="text-sm softskill mt-2">SQL, Python, Statistic, Machine Learning</h1> -->
+	<div class="my-16">&nbsp</div>
 </div>
 
 <style>
-	h3 {
-		font-size: 1.5rem;
-		font-weight: 600;
-		margin-bottom: 1rem;
+	.hanging-indent {
+		padding-left: 1em;
+		text-indent: -1em;
 	}
 </style>

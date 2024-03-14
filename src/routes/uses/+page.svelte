@@ -17,8 +17,8 @@
 <div class="container mx-auto max-w-5xl text-white px-8 sm:px-0">
 	<div class="flex flex-col text-start">
 		<div class="my-4">
-			<h3 class="h3 mb-4">Hardware</h3>
-			<Accordion class="text-xl">
+			<h2 class="h2 mb-4">Hardware</h2>
+			<Accordion class="text-2xl">
 				<AccordionItem open>
 					<svelte:fragment slot="lead"><Laptop2 /></svelte:fragment>
 					<svelte:fragment slot="summary">Macbook Air M2 13"</svelte:fragment>
@@ -125,8 +125,8 @@
 			</Accordion>
 		</div>
 		<div class="my-4">
-			<h3 class="h3 mb-4">Software</h3>
-			<Accordion class="text-xl">
+			<h2 class="h2 mb-4">Software</h2>
+			<Accordion class="text-2xl">
 				<AccordionItem>
 					<svelte:fragment slot="lead"><Code2 /></svelte:fragment>
 					<svelte:fragment slot="summary">Development</svelte:fragment>

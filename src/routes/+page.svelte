@@ -1,21 +1,30 @@
 <script>
 	import { Linkedin, Github, Mail } from 'lucide-svelte';
+	import { Avatar } from '@skeletonlabs/skeleton';
 
 	const links = 'flex items-center mb-2 sm:mb-0 sm:mr-2';
 </script>
 
-<div class="text-white flex items-center justify-center h-full px-4 sm:px-0">
-	<div class="text-start">
-		<p class="text-2xl sm:text-4xl">Tng Renjie</p>
-		<p class="text-lg sm:text-xl mt-2">Electrical & Electronic Engineering Undergraduate</p>
-		<div class="flex flex-col items-left sm:flex-row text-xs sm:text-sm mt-2">
-			<a class={links} href="https://www.linkedin.com/in/tng-renjie/">
+<div class="relative text-white flex items-center justify-center h-full px-4 sm:px-0">
+
+	<div class="relative z-10 text-start">
+		<div class="flex items-center">
+			<Avatar class="mr-4" src="photo_2024-03-04_16-43-23.jpg" width="w-32" border="border-4 border-surface-300-600-token hover:!border-primary-500" rounded="rounded-full" />
+			<div>
+				<p class="text-2xl sm:text-4xl">Tan Zheng Jie</p>
+				<p class="text-lg sm:text-2xl mt-2" style="font-family: Georgia;">Data Analyst</p>
+				<!-- <h1 class="text-sm softskill mt-2">Analytical thinker</h1> -->
+			</div>
+		</div>
+
+		<div class="logo-cloud grid-cols-1 sm:!grid-cols-3 gap-0.5 mt-3">
+			<a class="logo-item" href="https://www.linkedin.com/in/tan-zheng-jie/">
 				<Linkedin />&nbsp;LinkedIn
 			</a>
-			<a class={links} href="https://github.com/tngrj">
+			<a class="logo-item" href="https://github.com/tzjZhengJie">
 				<Github />&nbsp;Github
 			</a>
-			<a class={links} href="mailto:rtng001@e.ntu.edu.sg">
+			<a class="logo-item" href="mailto:zhengjietan20@gmail.com">
 				<Mail />&nbsp;Email
 			</a>
 		</div>

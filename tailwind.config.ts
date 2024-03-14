@@ -3,7 +3,7 @@ import type { Config } from 'tailwindcss'
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
 import { skeleton } from '@skeletonlabs/tw-plugin'
-import { myCustomTheme } from './green-theme'
+import { myCustomTheme } from './purple-theme'
 
 export default {
 	darkMode: 'class',
