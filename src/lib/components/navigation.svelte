@@ -23,7 +23,7 @@
 		border="border-0 rounded-lg outline outline-offset-2 outline-primary-500"
 		class="text-surface-600-300-token rounded-lg fixed z-50 -translate-x-1/2 bottom-10 left-1/2 bg-surface-300-600-token w-auto"
 	>
-		<TabAnchor class="small-tab" href="/resumeweb">
+		<TabAnchor class="small-tab" href="/">
 			<svelte:fragment slot="lead">
 				<div class={nav}>
 					<Home />
@@ -32,7 +32,7 @@
 			</svelte:fragment>
 		</TabAnchor>
 		<span class="mx-2"></span>
-		<TabAnchor class="small-tab" href="resumeweb/project">
+		<TabAnchor class="small-tab" href="/project">
 			<svelte:fragment slot="lead">
 				<div class={nav}>
 					<GanttChart />
@@ -41,7 +41,7 @@
 			</svelte:fragment>
 		</TabAnchor>
 		<span class="mx-2"></span>
-		<TabAnchor class="small-tab" href="resumeweb/about">
+		<TabAnchor class="small-tab" href="/about">
 			<svelte:fragment slot="lead">
 				<div class={nav}>
 					<User />
