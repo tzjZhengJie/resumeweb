@@ -27,14 +27,14 @@
 			</svelte:fragment>
 		</TabAnchor>
 		<span class="mx-2"></span>
-		<TabAnchor class="small-tab" href="{`${base}/project`}" selected={$page.url.pathname === `${base}/project`}>
+		<!-- <TabAnchor class="small-tab" href="{`${base}/project`}" selected={$page.url.pathname === `${base}/project`}>
 			<svelte:fragment slot="lead">
 				<div class={nav}>
 					<GanttChart />
 					<span class="hidden md:inline">Projects</span>
 				</div>
 			</svelte:fragment>
-		</TabAnchor>
+		</TabAnchor> -->
 		<span class="mx-2"></span>
 		<TabAnchor class="small-tab" href="{`${base}/about`}" selected={$page.url.pathname === `${base}/about`}>
 			<svelte:fragment slot="lead">
