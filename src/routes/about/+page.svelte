@@ -27,22 +27,22 @@
 				<TreeViewItem>
 					<div class="container flex flex-col">
 						<ul class="list-disc list-inside">
-							<li class="text-base mt-3">
+							<li class="text-base mt-3 hanging-indent">
 								My passion for data analytics was ignited by my keen interest in investments.
 							</li>
-							<li class="text-base mt-3">
+							<li class="text-base mt-3 hanging-indent">
 								I developed my own hypotheses on the stocks I was interested in and explored it
 								further in-depth.
 							</li>
-							<li class="text-base mt-3">
+							<li class="text-base mt-3 hanging-indent">
 								I enjoyed extracting data from various sources, tracking companies' financial
 								performance, stock valuations, and creating personalised portfolio dashboards.
 							</li>
-							<li class="text-base mt-3">
+							<li class="text-base mt-3 hanging-indent">
 								I enjoy pitching my investment ideas to my close friends, telling them the insights
 								that I have discovered.
 							</li>
-							<li class="text-base mt-3">
+							<li class="text-base mt-3 hanging-indent">
 								Through this process, I realised that I was essentially performing the role of a
 								data analyst, which then fuel my desire to pursue this field professionally.
 							</li>
@@ -77,8 +77,8 @@
 								<div class="label"><b class="text-lg">Specialisation:</b></div>
 								<div class="label"><b>Info-communication Engineering: </b></div>
 								<ul class="list-disc list-inside">
-									<li class="text-base">Data Intelligence & Processing</li>
-									<li class="text-base">Computer Engineering</li>
+									<li class="text-base mt-3 hanging-indent">Data Intelligence & Processing</li>
+									<li class="text-base mt-3">Computer Engineering</li>
 								</ul>
 							</div>
 						</TreeViewItem>
@@ -86,13 +86,13 @@
 							<div class="container">
 								<div class="label"><b class="text-lg">Relevant Modules:</b></div>
 								<ul class="list-disc list-inside">
-									<li class="text-base">Database Systems</li>
-									<li class="text-base">Artificial Intelligence & Data Mining</li>
-									<li class="text-base">Pattern Recognition & Deep Learning</li>
-									<li class="text-base">Machine Learning Design & Application</li>
-									<li class="text-base">Introduction to Data Science & AI</li>
-									<li class="text-base">Computer Communication</li>
-									<li class="text-base">Digital Signal Processing</li>
+									<li class="text-base mt-3 hanging-indent">Database Systems</li>
+									<li class="text-base mt-3 hanging-indent">Artificial Intelligence & Data Mining</li>
+									<li class="text-base mt-3 hanging-indent">Pattern Recognition & Deep Learning</li>
+									<li class="text-base mt-3 hanging-indent">Machine Learning Design & Application</li>
+									<li class="text-base mt-3 hanging-indent">Introduction to Data Science & AI</li>
+									<li class="text-base mt-3 hanging-indent">Computer Communication</li>
+									<li class="text-base mt-3 hanging-indent">Digital Signal Processing</li>
 								</ul>
 							</div>
 						</TreeViewItem>
@@ -126,12 +126,12 @@
 							<svelte:fragment slot="children">
 								<TreeViewItem>
 									<ul class="list-disc list-inside">
-										<li class="text-base mt-2 cursor-pointer">
+										<li class="text-base mt-2 cursor-pointer hanging-indent">
 											Employed fundamental, technical, and news analysis techniques to evaluate
 											S-REITs
 										</li>
 
-										<li class="text-base mt-2 cursor-pointer">
+										<li class="text-base mt-2 cursor-pointer hanging-indent">
 											Developed portfolio's weight optimisation with Pandas, NumPy, and Scipy
 										</li>
 
@@ -140,15 +140,15 @@
 											after dividends, FED meetings, earnings report, etc.)
 										</li>
 
-										<li class="text-base mt-2 cursor-pointer">
+										<li class="text-base mt-2 cursor-pointer hanging-indent">
 											Libraries Utilised: Pandas, NumPy, Matplotlib, Scipyy, yfinance
 										</li>
 
-										<li class="text-base mt-2 cursor-pointer">
+										<li class="text-base mt-2 cursor-pointer hanging-indent">
 											Financial Skills: DCF Valuation Models, Pinescript, Macroeconomics
 										</li>
 
-										<li class="text-base mt-2 cursor-pointer">
+										<li class="text-base mt-2 cursor-pointer hanging-indent">
 											Designing Skills: Design DCF Models dashboard on Google Sheet
 										</li>
 									</ul>
@@ -314,7 +314,7 @@
 											Utilised Python libraries such as NumPy, Pandas, BeautifulSoup, Scikit-learn
 											(Cosine similarity, TfidfVectorizer)
 										</li>
-										<li class="text-base mt-3 cursor-pointer hanging-indente">
+										<li class="text-base mt-3 cursor-pointer hanging-indent">
 											<div class="inline-flex items-center space-x-2">
 												<span class="mr-2">For more info, visit:</span>
 												<a
@@ -324,7 +324,7 @@
 												>
 													<Github />
 												</a>
-												<a href="https://youtu.be/U619sMGSxx8" target="_blank">
+												<a href="https://www.youtube.com/watch?v=qLfPS_FsDyc&feature=youtu.be" target="_blank">
 													<Youtube />
 												</a>
 											</div>
