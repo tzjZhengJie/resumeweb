@@ -27,29 +27,25 @@
 				<TreeViewItem>
 					<div class="container flex flex-col">
 						<ul class="list-disc list-inside">
-							<li class="text-base text-justify">
+							<li class="text-base mt-3">
 								My passion for data analytics was ignited by my keen interest in investments.
 							</li>
-							<li class="text-base mt-3 text-justify">
-								I developed my own hypotheses on the stocks I was interested in and explored
+							<li class="text-base mt-3">
+								I developed my own hypotheses on the stocks I was interested in and explored it
+								further in-depth.
 							</li>
-							<p class="text-base pl-5">it further in-depth.</p>
-							<li class="text-base mt-3 text-justify">
+							<li class="text-base mt-3">
 								I enjoyed extracting data from various sources, tracking companies' financial
-							</li>
-							<p class="text-base pl-5">
 								performance, stock valuations, and creating personalised portfolio dashboards.
-							</p>
-							<li class="text-base mt-3 text-justify">
-								I enjoy pitching my investment ideas to my close friends, telling them the
 							</li>
-							<p class="text-base pl-5">insights that I have discovered.</p>
-							<li class="text-base mt-3 text-justify">
-								Through this process, I realised that I was essentially performing the role of
+							<li class="text-base mt-3">
+								I enjoy pitching my investment ideas to my close friends, telling them the insights
+								that I have discovered.
 							</li>
-							<p class="text-base pl-5">
-								a data analyst, which then fuel my desire to pursue this field professionally.
-							</p>
+							<li class="text-base mt-3">
+								Through this process, I realised that I was essentially performing the role of a
+								data analyst, which then fuel my desire to pursue this field professionally.
+							</li>
 						</ul>
 					</div>
 				</TreeViewItem>
