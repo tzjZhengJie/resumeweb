@@ -26,13 +26,6 @@
 			const x = elemCarousel.clientWidth * currentIndex;
 			elemCarousel.scroll(x, 0);
 		}
-
-		function carouselThumbnail(index) {
-        elemCarousel.scrollLeft = elemCarousel.clientWidth * index;
-        currentIndex = index;
-        imageDescription = imageNames[currentIndex]; // Update the image description
-    }
-
 	let images = [
         {
             name: 'rgw-1',
@@ -119,16 +112,4 @@
 	</div>
 
 	<br />
-	<div class="card p-4 grid grid-cols-6 gap-4">
-		{#each imageNames as imageName, i}
-			<button type="button" on:click={() => carouselThumbnail(i)}>
-				<img
-					class="rounded-container-token"
-					src="/hackathon/{imageName}.png"
-					alt={imageName}
-					loading="lazy"
-				/>
-			</button>
-		{/each}
-	</div>
 </div>
