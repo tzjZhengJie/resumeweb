@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { ArrowLeft, ArrowRight } from 'lucide-svelte';
-
+	import { assets } from '$app/paths';
 	let elemCarousel: HTMLDivElement;
 	let currentIndex = 0;
 	let imageDescription = '';
@@ -91,7 +91,7 @@
 			{#each imageNames as imageName}
 				<img
 					class="snap-center w-[1024px] rounded-container-token"
-					src="/hackathon/{imageName}.png"
+					src={`${assets}/hackathon/${imageName}.png`}
 					alt={imageName}
 					loading="lazy"
 				/>			

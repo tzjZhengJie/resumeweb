@@ -1,6 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
+	import { assets } from '$app/paths';
 	import typewriter from '../../api/typewriter';
 	import { TabGroup, Tab, TabAnchor } from '@skeletonlabs/skeleton';
 	let ready = false;
@@ -21,7 +22,7 @@
 			<div class="card card-hover overflow-hidden">
 				<header>
 					<img
-						src="/spotify.jpg"
+						src={`${assets}/images/spotify.jpg`}
 						alt="Spotify Dashboard"
 						class="inset-0 w-full h-full object-cover"
 					/>
@@ -49,7 +50,7 @@
 			<div class="card card-hover overflow-hidden">
 				<header>
 					<img
-						src="/netflix_dashboard.png"
+						src={`${assets}/images/netflix_dashboard.png`}
 						alt="Landing Page"
 						class="inset-0 w-full h-full object-cover"
 					/>
@@ -71,7 +72,7 @@
 			<div class="card card-hover overflow-hidden">
 				<header>
 					<img
-						src="/covid_dashboard_1.png"
+						src={`${assets}/images/hackathon-landing-page.png`}
 						alt="Landing Page"
 						class="inset-0 w-full h-full object-cover"
 					/>
@@ -100,7 +101,7 @@
 				<a href="/project/hackathon" in:fly={{ duration: 500 }} out:fly={{ duration: 500 }}>
 					<header>
 						<img
-							src="/hackathon-landing-page.png"
+							src="{`${assets}/images/hackathon-landing-page.png`}"
 							alt="Landing Page"
 							class="inset-0 w-full h-80 object-cover"
 						/>
