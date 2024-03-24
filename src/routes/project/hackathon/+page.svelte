@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { ArrowLeft, ArrowRight } from 'lucide-svelte';
 	import { assets } from '$app/paths';
+	import { onMount } from 'svelte';
 	
 	let elemCarousel: HTMLDivElement;
 	let currentIndex = 0;
@@ -66,9 +67,9 @@
         // Add more images as needed...
     ];
 
-    function updateCurrentIndex() {
+	onMount(() => {
         currentIndex = Math.round(elemCarousel.scrollLeft / elemCarousel.clientWidth);
-    }
+    });
 </script>
 <style>
 .snap-x.snap-mandatory.scroll-smooth.flex.overflow-x-auto {
