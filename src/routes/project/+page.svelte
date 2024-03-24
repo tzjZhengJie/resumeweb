@@ -73,7 +73,7 @@
 			<div class="card card-hover overflow-hidden">
 				<header>
 					<img
-						src={`${assets}/images/covid_dasboard_1.png`}
+						src={`${assets}/images/covid_dashboard_1.png`}
 						alt="Landing Page"
 						class="inset-0 w-full h-full object-cover"
 					/>
