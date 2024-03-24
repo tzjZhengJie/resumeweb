@@ -2,6 +2,7 @@
     import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { assets } from '$app/paths';
+	import { base } from '$app/paths';
 	import typewriter from '../../api/typewriter';
 	import { TabGroup, Tab, TabAnchor } from '@skeletonlabs/skeleton';
 	let ready = false;
@@ -98,7 +99,7 @@
 		{:else if tabSet === 1}
 		<div class="grid gap-4 grid-cols-2 sm:grid-cols-2 justify-center sm:mx-64 pb-64 mx-4 mt-4">
 			<div class="card card-hover overflow-hidden">
-				<a href="/project/hackathon" in:fly={{ duration: 500 }} out:fly={{ duration: 500 }}>
+				<a href="{`${base}/project/hackathon`}" in:fly={{ duration: 500 }} out:fly={{ duration: 500 }}>
 					<header>
 						<img
 							src="{`${assets}/images/hackathon-landing-page.png`}"

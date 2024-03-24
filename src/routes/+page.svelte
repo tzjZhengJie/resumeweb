@@ -1,5 +1,6 @@
 <script>
 	import { Linkedin, Github, Mail, Download } from 'lucide-svelte';
+	import { assets } from '$app/paths';
 	import { Avatar } from '@skeletonlabs/skeleton';
 	import { onMount } from 'svelte';
 	import { fly } from 'svelte/transition';
@@ -26,7 +27,7 @@
 				<div class="flex item-center">
 					<Avatar
 						class="mr-4"
-						src="photo_2024-03-04_16-43-23.jpg"
+						src={`${assets}/images/photo_2024-03-04_16-43-23.jpg`}
 						width="w-32"
 						border="border-4 border-surface-300-600-token hover:!border-primary-500"
 						rounded="rounded-full"

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { ArrowLeft, ArrowRight } from 'lucide-svelte';
 	import { assets } from '$app/paths';
+	
 	let elemCarousel: HTMLDivElement;
 	let currentIndex = 0;
 	let imageDescription = '';
