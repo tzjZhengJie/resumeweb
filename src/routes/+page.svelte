@@ -27,7 +27,7 @@
 				<div class="flex item-center">
 					<Avatar
 						class="mr-4"
-						src={`${assets}/images/photo_2024-03-04_16-43-23.jpg`}
+						src={`${assets}/me.jpg`}
 						width="w-32"
 						border="border-4 border-surface-300-600-token hover:!border-primary-500"
 						rounded="rounded-full"

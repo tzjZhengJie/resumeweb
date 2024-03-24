@@ -102,7 +102,7 @@
 				<a href="{`${base}/project/hackathon`}" in:fly={{ duration: 500 }} out:fly={{ duration: 500 }}>
 					<header>
 						<img
-							src="{`${assets}/images/hackathon-landing-page.png`}"
+							src={`${assets}/images/hackathon-landing-page.png`}
 							alt="Landing Page"
 							class="inset-0 w-full h-80 object-cover"
 						/>
