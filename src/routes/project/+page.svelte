@@ -1,14 +1,15 @@
 <script lang="ts">
-    import { onMount } from 'svelte';
+    import { onMount, afterUpdate } from 'svelte';
 	import { fly } from 'svelte/transition';
 	import { assets } from '$app/paths';
 	import { base } from '$app/paths';
 	import typewriter from '../../api/typewriter';
 	import { TabGroup, Tab, TabAnchor } from '@skeletonlabs/skeleton';
+	import { page } from '$app/stores'; 
 	let ready = false;
 	let ready1 = false;
 	let ready_overall = false;
-	let tabSet: number = 0;
+	let tabSet: number;
 	onMount(() => {
         setTimeout(() => {
             ready = true;
@@ -30,6 +31,11 @@
             }, 510);
         }
     }
+	afterUpdate(() => {
+        if (ready) {
+            tabSet = 0;
+        }
+    });
 </script>
 
 {#if ready_overall}
@@ -41,88 +47,87 @@
 		<!-- <Tab bind:group={tabSet} name="tab3" value={2}>Machine Learning</Tab> -->
 	</div>
 	
-	
 	<!-- Tab Panels --->
 	<svelte:fragment slot="panel">
 		{#if tabSet === 0 && ready}
-		<div in:fly={{x:-50, duration: 50, delay: 200}} out:fly={{x:-50, duration: 200}}>
-			<div class="grid gap-4 grid-cols-1 sm:grid-cols-2 sm:mx-64 pb-48 mx-8 mt-20">
+			<div in:fly={{x:-50, duration: 500, delay: 200}} out:fly={{x:-50, duration: 500}}>
+				<div class="grid gap-4 grid-cols-1 sm:grid-cols-2 sm:mx-64 pb-48 mx-8 mt-20">
+					<div class="card card-hover overflow-hidden">
+						<header>
+							<img
+								src={`${assets}/images/spotify.jpg`}
+								alt="Spotify Dashboard"
+								class="inset-0 w-full h-full object-cover"
+							/>
+						</header>
+						<div class="p-4 space-y-4">
+							<h3 class="h3">Spotify Dashboard</h3>
+							<article>
+								<ul class="list-disc pl-5 space-y-2">
+									<li class="text-sm">
+										Uses PowerPoint to generate a Spotify theme canvas background
+									</li>
+									<li class="text-sm">
+										Added new measures that utilise the current data in the dataset and produce new insights such as average streams per year
+									</li>
+									<li class="text-sm">
+										Understanding basic tools in Power BI such as slicers, drop down bars, etc, to promote user-friendly interface
+									</li>
+									<li class="anchor text-sm font-bold">
+										Skill utilised: Power BI, PowerPoint
+									</li>
+								</ul>
+							</article>
+						</div>
+					</div>
 				<div class="card card-hover overflow-hidden">
 					<header>
 						<img
-							src={`${assets}/images/spotify.jpg`}
-							alt="Spotify Dashboard"
+							src={`${assets}/images/netflix_dashboard.png`}
+							alt="Landing Page"
 							class="inset-0 w-full h-full object-cover"
 						/>
 					</header>
 					<div class="p-4 space-y-4">
-						<h3 class="h3">Spotify Dashboard</h3>
+						<h3 class="h3">Netflix Dashboard</h3>
 						<article>
 							<ul class="list-disc pl-5 space-y-2">
 								<li class="text-sm">
-									Uses PowerPoint to generate a Spotify theme canvas background
+									Using Tableau to create a dashboard that visualises metrics such as Top Genre, Age ratings, Ratings, etc.
 								</li>
 								<li class="text-sm">
-									Added new measures that utilise the current data in the dataset and produce new insights such as average streams per year
-								</li>
-								<li class="text-sm">
-									Understanding basic tools in Power BI such as slicers, drop down bars, etc, to promote user-friendly interface
-								</li>
-								<li class="anchor text-sm font-bold">
-									Skill utilised: Power BI, PowerPoint
-								</li>
-							</ul>
+									Understanding basic tools in Tableau such as packed-bubbles, horizontal bar charts, distinct count for area chart, geographic map.
+								</li>	
+			
 						</article>
 					</div>
 				</div>
-			<div class="card card-hover overflow-hidden">
-				<header>
-					<img
-						src={`${assets}/images/netflix_dashboard.png`}
-						alt="Landing Page"
-						class="inset-0 w-full h-full object-cover"
-					/>
-				</header>
-				<div class="p-4 space-y-4">
-					<h3 class="h3">Netflix Dashboard</h3>
-					<article>
-						<ul class="list-disc pl-5 space-y-2">
-							<li class="text-sm">
-								Using Tableau to create a dashboard that visualises metrics such as Top Genre, Age ratings, Ratings, etc.
-							</li>
-							<li class="text-sm">
-								Understanding basic tools in Tableau such as packed-bubbles, horizontal bar charts, distinct count for area chart, geographic map.
-							</li>	
-		
-					</article>
+				<div class="card card-hover overflow-hidden">
+					<header>
+						<img
+							src={`${assets}/images/covid_dashboard_1.png`}
+							alt="Landing Page"
+							class="inset-0 w-full h-full object-cover"
+						/>
+					</header>
+					<div class="p-4 space-y-4">
+						<h3 class="h3">COVID Dashboard</h3>
+						<article>
+							<ul class="list-disc pl-5 space-y-2">
+								<li class="text-sm">
+									Utilised SQL to clean and transform data from the World Health Organisation
+								</li>
+								<li class="text-sm">
+									Created a dashboard in Tableau to visualise the data
+								</li>
+								<li class="anchor">
+									Skills used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
+								</li>
+						</article>
+					</div>
+				</div>
 				</div>
 			</div>
-			<div class="card card-hover overflow-hidden">
-				<header>
-					<img
-						src={`${assets}/images/covid_dashboard_1.png`}
-						alt="Landing Page"
-						class="inset-0 w-full h-full object-cover"
-					/>
-				</header>
-				<div class="p-4 space-y-4">
-					<h3 class="h3">COVID Dashboard</h3>
-					<article>
-						<ul class="list-disc pl-5 space-y-2">
-							<li class="text-sm">
-								Utilised SQL to clean and transform data from the World Health Organisation
-							</li>
-							<li class="text-sm">
-								Created a dashboard in Tableau to visualise the data
-							</li>
-							<li class="anchor">
-								Skills used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
-							</li>
-					</article>
-				</div>
-			</div>
-			</div>
-		</div>
 		{:else if tabSet === 1 && ready1}
 		<div class="grid gap-4 grid-cols-2 sm:grid-cols-2 justify-center sm:mx-64 pb-64 mx-4 mt-4">
 			<div class="card card-hover overflow-hidden">
