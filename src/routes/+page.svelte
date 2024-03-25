@@ -22,9 +22,9 @@
 }
 </style>
 
+{#if ready}
 <div class="relative text-white flex items-center justify-center h-full px-4 sm:px-0">
 	<div class="relative z-10 text-start">
-		{#if ready}
 		<div class="text-start">
 			<div in:typewriter={{ speed: 10 }}>
 				
@@ -70,6 +70,6 @@
 				</div>
 			</div>
 		</div>
-		{/if}
 	</div>	
 </div>
+{/if}

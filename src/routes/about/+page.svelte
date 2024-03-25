@@ -17,7 +17,11 @@
 	import { fly } from 'svelte/transition';
 	import typewriter from '../../api/typewriter';
 	let ready = false;
-	onMount(() => (ready = true));
+	onMount(() => {
+        setTimeout(() => {
+            ready = true;
+        }, 200);
+    });
 </script>
 
 <div class="container-center mx-auto max-w-6xl text-white px-8 sm:px-0 mt-20 ">
