@@ -6,24 +6,41 @@
 	import typewriter from '../../api/typewriter';
 	import { TabGroup, Tab, TabAnchor } from '@skeletonlabs/skeleton';
 	let ready = false;
+	let ready1 = false;
+	let ready_overall = false;
 	let tabSet: number = 0;
 	onMount(() => {
         setTimeout(() => {
             ready = true;
+			ready1 = true;
+			ready_overall = true;
         }, 500); // adjust this value to match the duration of the transition
     });
-
+	$: {
+        if (tabSet === 0) {
+            ready1 = false;
+			setTimeout(() => {
+                ready = true;
+            }, 510);
+			
+        } else if (tabSet === 1) {
+            ready = false;
+            setTimeout(() => {
+                ready1 = true;
+            }, 510);
+        }
+    }
 </script>
 
-{#if ready}
+{#if ready_overall}
 <TabGroup justify="justify-center">
-	{#if ready}
-		<div in:fly={{x:-50, duration: 500, delay: 200}} out:fly={{x:-50, duration: 200}} style="display: flex;">
-			<Tab bind:group={tabSet} name="tab1" value={0}>Dashboard</Tab>
-			<Tab bind:group={tabSet} name="tab2" value={1}>Hackathon</Tab>
-			<!-- <Tab bind:group={tabSet} name="tab3" value={2}>Machine Learning</Tab> -->
-		</div>
-	{/if}
+	
+	<div in:fly={{x:-50, duration: 500, delay: 200}} out:fly={{x:-50, duration: 200}} style="display: flex;">
+		<Tab bind:group={tabSet} name="tab1" value={0}>Dashboard</Tab>
+		<Tab bind:group={tabSet} name="tab2" value={1}>Hackathon</Tab>
+		<!-- <Tab bind:group={tabSet} name="tab3" value={2}>Machine Learning</Tab> -->
+	</div>
+	
 	
 	<!-- Tab Panels --->
 	<svelte:fragment slot="panel">
@@ -106,7 +123,7 @@
 			</div>
 			</div>
 		</div>
-		{:else if tabSet === 1 && ready}
+		{:else if tabSet === 1 && ready1}
 		<div class="grid gap-4 grid-cols-2 sm:grid-cols-2 justify-center sm:mx-64 pb-64 mx-4 mt-4">
 			<div class="card card-hover overflow-hidden">
 				<a href="{`${base}/project/hackathon`}" in:fly={{x:-50, duration: 500 }} out:fly={{x:-50, duration: 500, delay: 200 }}>
@@ -138,7 +155,7 @@
 				</a>
 			</div>
 		</div>
-		{:else if tabSet === 2 && ready}
+		{:else if tabSet === 2 && ready1}
 			(tab panel 3 contents)
 		{/if}
 	</svelte:fragment>
