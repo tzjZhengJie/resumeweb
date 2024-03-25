@@ -19,8 +19,8 @@
 	<!-- Tab Panels --->
 	<svelte:fragment slot="panel">
 		{#if tabSet === 0}
-		<div in:fly={{ duration: 500 }} out:fly={{ duration: 500 }}>
-			<div class="grid gap-4 grid-cols-1 sm:grid-cols-2 justify-center sm:mx-64 pb-48 mx-8 mt-20">
+		<div in:fly={{ duration: 50, delay: 500}} out:fly={{ duration: 500}}>
+			<div class="grid gap-4 grid-cols-1 sm:grid-cols-2 sm:mx-64 pb-48 mx-8 mt-20">
 				<div class="card card-hover overflow-hidden">
 					<header>
 						<img

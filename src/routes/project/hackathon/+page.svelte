@@ -28,6 +28,17 @@
 			const x = elemCarousel.clientWidth * currentIndex;
 			elemCarousel.scroll(x, 0);
 		}
+
+	let imagesLoaded = 0;
+
+	function onImageLoad() {
+		imagesLoaded++;
+		if (imagesLoaded === imageNames.length) {
+			currentIndex = 0;
+			elemCarousel.scrollLeft = 0;
+		}
+}
+
 	let images = [
         {
             name: 'rgw-1',
@@ -69,6 +80,7 @@
 
 	onMount(() => {
         currentIndex = Math.round(elemCarousel.scrollLeft / elemCarousel.clientWidth);
+		elemCarousel.scrollLeft = 0;
     });
 </script>
 <style>
@@ -84,7 +96,7 @@
 
 <div class="container w-2/4 mx-auto">
 	<h2 class="text-2xl text-white font-bold">My contributions</h2>
-	<div class="card p-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center">
+	<div class="card p-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center mt-8">
 		<button type="button" class="btn-icon variant-filled hidden sm:inline-flex" on:click={carouselLeft}>
 			<ArrowLeft />
 		</button>
@@ -92,10 +104,11 @@
 		<div bind:this={elemCarousel} class="snap-x snap-mandatory scroll-smooth flex overflow-x-auto">
 			{#each imageNames as imageName}
 				<img
-					class="snap-center w-[1024px] rounded-container-token"
+					class="snap-center w-full rounded-container-token"
 					src={`${assets}/hackathon/${imageName}.png`}
 					alt={imageName}
 					loading="lazy"
+					on:load={onImageLoad}
 				/>			
 			{/each}
 		</div>
