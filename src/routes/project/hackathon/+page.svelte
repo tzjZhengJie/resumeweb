@@ -104,7 +104,7 @@
 		<div bind:this={elemCarousel} class="snap-x snap-mandatory scroll-smooth flex overflow-x-auto">
 			{#each imageNames as imageName}
 				<img
-					class="snap-center w-[1024px] rounded-container-token"
+					class="snap-center w-[2048px] rounded-container-token"
 					src={`${assets}/hackathon/${imageName}.png`}
 					alt={imageName}
 					loading="lazy"

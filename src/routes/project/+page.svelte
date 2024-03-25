@@ -17,16 +17,17 @@
 
 {#if ready}
 <TabGroup justify="justify-center">
-	
+	{#if ready}
 		<div in:fly={{x:-50, duration: 500, delay: 200}} out:fly={{x:-50, duration: 200}} style="display: flex;">
 			<Tab bind:group={tabSet} name="tab1" value={0}>Dashboard</Tab>
 			<Tab bind:group={tabSet} name="tab2" value={1}>Hackathon</Tab>
 			<!-- <Tab bind:group={tabSet} name="tab3" value={2}>Machine Learning</Tab> -->
 		</div>
+	{/if}
 	
 	<!-- Tab Panels --->
 	<svelte:fragment slot="panel">
-		{#if tabSet === 0}
+		{#if tabSet === 0 && ready}
 		<div in:fly={{x:-50, duration: 50, delay: 200}} out:fly={{x:-50, duration: 200}}>
 			<div class="grid gap-4 grid-cols-1 sm:grid-cols-2 sm:mx-64 pb-48 mx-8 mt-20">
 				<div class="card card-hover overflow-hidden">
@@ -105,7 +106,7 @@
 			</div>
 			</div>
 		</div>
-		{:else if tabSet === 1}
+		{:else if tabSet === 1 && ready}
 		<div class="grid gap-4 grid-cols-2 sm:grid-cols-2 justify-center sm:mx-64 pb-64 mx-4 mt-4">
 			<div class="card card-hover overflow-hidden">
 				<a href="{`${base}/project/hackathon`}" in:fly={{x:-50, duration: 500 }} out:fly={{x:-50, duration: 500, delay: 200 }}>
@@ -137,7 +138,7 @@
 				</a>
 			</div>
 		</div>
-		{:else if tabSet === 2}
+		{:else if tabSet === 2 && ready}
 			(tab panel 3 contents)
 		{/if}
 	</svelte:fragment>
