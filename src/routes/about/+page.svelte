@@ -21,7 +21,7 @@
 </script>
 
 <div class="container-center mx-auto max-w-6xl text-white px-8 sm:px-0 mt-20 ">
-	<div class="relative z-10 text-start" transition:fly={{ x: -50, duration: 500, delay: 500 }}>
+	<div class="relative z-10 text-start" transition:fly={{ x: -50, duration: 500}}>
 		{#if ready}
 		<div class="text-start"> 
 				<TreeView>					
