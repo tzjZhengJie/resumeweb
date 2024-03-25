@@ -19,35 +19,36 @@
 	<!-- Tab Panels --->
 	<svelte:fragment slot="panel">
 		{#if tabSet === 0}
-		<div class="grid gap-4 grid-cols-1 sm:grid-cols-2 justify-center sm:mx-64 pb-48 mx-8 mt-20">
-			<div class="card card-hover overflow-hidden">
-				<header>
-					<img
-						src={`${assets}/images/spotify.jpg`}
-						alt="Spotify Dashboard"
-						class="inset-0 w-full h-full object-cover"
-					/>
-				</header>
-				<div class="p-4 space-y-4">
-					<h3 class="h3">Spotify Dashboard</h3>
-					<article>
-						<ul class="list-disc pl-5 space-y-2">
-							<li class="text-sm">
-								Uses PowerPoint to generate a Spotify theme canvas background
-							</li>
-							<li class="text-sm">
-								Added new measures that utilise the current data in the dataset and produce new insights such as average streams per year
-							</li>
-							<li class="text-sm">
-								Understanding basic tools in Power BI such as slicers, drop down bars, etc, to promote user-friendly interface
-							</li>
-							<li class="anchor text-sm font-bold">
-								Skill utilised: Power BI, PowerPoint
-							</li>
-						</ul>
-					</article>
+		<div in:fly={{ duration: 500 }} out:fly={{ duration: 500 }}>
+			<div class="grid gap-4 grid-cols-1 sm:grid-cols-2 justify-center sm:mx-64 pb-48 mx-8 mt-20">
+				<div class="card card-hover overflow-hidden">
+					<header>
+						<img
+							src={`${assets}/images/spotify.jpg`}
+							alt="Spotify Dashboard"
+							class="inset-0 w-full h-full object-cover"
+						/>
+					</header>
+					<div class="p-4 space-y-4">
+						<h3 class="h3">Spotify Dashboard</h3>
+						<article>
+							<ul class="list-disc pl-5 space-y-2">
+								<li class="text-sm">
+									Uses PowerPoint to generate a Spotify theme canvas background
+								</li>
+								<li class="text-sm">
+									Added new measures that utilise the current data in the dataset and produce new insights such as average streams per year
+								</li>
+								<li class="text-sm">
+									Understanding basic tools in Power BI such as slicers, drop down bars, etc, to promote user-friendly interface
+								</li>
+								<li class="anchor text-sm font-bold">
+									Skill utilised: Power BI, PowerPoint
+								</li>
+							</ul>
+						</article>
+					</div>
 				</div>
-			</div>
 			<div class="card card-hover overflow-hidden">
 				<header>
 					<img
@@ -94,7 +95,7 @@
 					</article>
 				</div>
 			</div>
-			
+			</div>
 		</div>
 		{:else if tabSet === 1}
 		<div class="grid gap-4 grid-cols-2 sm:grid-cols-2 justify-center sm:mx-64 pb-64 mx-4 mt-4">
