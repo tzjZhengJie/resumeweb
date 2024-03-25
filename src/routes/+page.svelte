@@ -6,7 +6,11 @@
 	import { fly } from 'svelte/transition';
 	import typewriter from '../api/typewriter';
 	let ready = false;
-	onMount(() => (ready = true));
+	onMount(() => {
+        setTimeout(() => {
+            ready = true;
+        }, 500);
+    });
 
 	const links = 'flex items-center mb-2 sm:mb-0 sm:mr-2';
 </script>
