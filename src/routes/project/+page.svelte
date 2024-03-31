@@ -120,7 +120,7 @@
 								<li class="text-sm">
 									Created a dashboard in Tableau to visualise the data
 								</li>
-								<li class="anchor">
+								<li class="anchor text-sm font-bold">
 									Skills used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
 								</li>
 						</article>
