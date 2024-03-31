@@ -42,8 +42,8 @@
 <TabGroup justify="justify-center">
 	
 	<div in:fly={{x:-50, duration: 500, delay: 200}} out:fly={{x:-50, duration: 200}} style="display: flex;">
-		<Tab bind:group={tabSet} name="tab1" value={0}>Dashboard</Tab>
-		<Tab bind:group={tabSet} name="tab2" value={1}>Hackathon</Tab>
+		<Tab bind:group={tabSet} name="tab1" value={0} class="text-white">Dashboard</Tab>
+		<Tab bind:group={tabSet} name="tab2" value={1} class="text-white">Hackathon</Tab>
 		<!-- <Tab bind:group={tabSet} name="tab3" value={2}>Machine Learning</Tab> -->
 	</div>
 	

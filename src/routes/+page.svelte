@@ -32,14 +32,14 @@
 					<Avatar
 						class="mr-4"
 						src={`${assets}/me.jpg`}
-						width="w-32"
+						width="w-40"
 						border="border-4 border-surface-300-600-token hover:!border-primary-500"
 						rounded="rounded-full"
 					/>
 					<div class="flex-col">
 						<div class="mt-6">
-							<h1 class="text-4xl sm:text-3xl font-bold">Zheng Jie</h1>
-							<p class="text-xs sm:text-sm mt-2">
+							<h1 class="text-4xl sm:text-4xl font-bold">Zheng Jie</h1>
+							<p class="text-3x1 sm:text-3x1 mt-2">
 								I'm a data analyst with a passion for data-driven decision-making and problem-solving.
 							</p>
 						</div>
