@@ -142,7 +142,7 @@
 									Data preparation and cleaning in Excel to ensure consistency and accuracy
 								</li>
 								<li class="text-sm">
-									Utilised pivot tables afor visualisation of data, allowing dynamic updates as filters changes
+									Utilised pivot tables for visualisation of data, allowing dynamic updates as filters changes
 								</li>
 								<li class="text-sm">
 									Adding slicers for easy filtering and data segmentation, and using timeline to filter specific date ranges.
@@ -172,8 +172,11 @@
 									Utilised SQL to do feature extraction; frequency of employee coming into different timeslot,
 									how many days are the employees working per week, etc.
 								</li>
+								<li class="text-sm">
+									Utilised DAX to add leading zeros to the employee ID, etc. 
+								</li>
 								<li class="anchor text-sm font-bold">
-									Skill utilised: SQL, Pandas, Pandasql, Numpy, Matplotlib, Glob
+									Skill utilised: SQL, Pandas, Pandasql, Numpy, Matplotlib, Glob,
 								</li>
 						</article>
 					</div>
