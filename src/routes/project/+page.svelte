@@ -126,6 +126,58 @@
 						</article>
 					</div>
 				</div>
+				<div class="card card-hover overflow-hidden">
+					<header>
+						<img
+							src={`${assets}/images/excel_coffee_dashboard.png`}
+							alt="Landing Page"
+							class="inset-0 w-full h-full object-cover"
+						/>
+					</header>
+					<div class="p-4 space-y-4">
+						<h3 class="h3">Coffee Sales Dashboard</h3>
+						<article>
+							<ul class="list-disc pl-5 space-y-2">
+								<li class="text-sm">
+									Data preparation and cleaning in Excel to ensure consistency and accuracy
+								</li>
+								<li class="text-sm">
+									Utilised pivot tables afor visualisation of data, allowing dynamic updates as filters changes
+								</li>
+								<li class="text-sm">
+									Adding slicers for easy filtering and data segmentation, and using timeline to filter specific date ranges.
+								</li>
+								<li class="anchor text-sm font-bold">
+									Advanced Excel Formulas used: XLOOKUP, INDEX, MATCH, IFERROR, etc
+								</li>
+						</article>
+					</div>
+				</div>
+				<div class="card card-hover overflow-hidden">
+					<header>
+						<img
+							src={`${assets}/images/company_abc.png`}
+							alt="Landing Page"
+							class="inset-0 w-full h-full object-cover"
+						/>
+					</header>
+					<div class="p-4 space-y-4">
+						<h3 class="h3">Company's Employee Analytics Dashboard</h3>
+						<article>
+							<ul class="list-disc pl-5 space-y-2">
+								<li class="text-sm">
+									Data cleaning with Python; utilised Pandas library to clean and transform data
+								</li>
+								<li class="text-sm">
+									Utilised SQL to do feature extraction; frequency of employee coming into different timeslot,
+									how many days are the employees working per week, etc.
+								</li>
+								<li class="anchor text-sm font-bold">
+									Skill utilised: SQL, Pandas, Pandasql, Numpy, Matplotlib, Glob
+								</li>
+						</article>
+					</div>
+				</div>
 				</div>
 			</div>
 		{:else if tabSet === 1 && ready1}
