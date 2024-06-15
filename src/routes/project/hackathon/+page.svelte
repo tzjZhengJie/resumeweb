@@ -2,6 +2,11 @@
 	import { ArrowLeft, ArrowRight } from 'lucide-svelte';
 	import { assets } from '$app/paths';
 	import { onMount } from 'svelte';
+	import { Youtube } from 'lucide-svelte';
+	import { base } from '$app/paths';
+	import {
+		Home
+	} from 'lucide-svelte';
 	
 	let elemCarousel: HTMLDivElement;
 	let currentIndex = 0;
@@ -47,6 +52,7 @@
                 'Mine data such as company, job titles, level, job descriptoon, time posted, url.',
                 // Add more descriptions as needed...
             ]
+			
         },
         {
             name: 'rgw-2',
@@ -95,7 +101,10 @@
 </style>
 
 <div class="container w-2/4 mx-auto">
-	<h2 class="text-2xl text-white font-bold">My contributions</h2>
+
+	<!-- <a href="{`${base}`}" class="btn-icon variant-filled"><Home /></a> -->
+	<h2 class="text-4xl text-white font-bold" style="margin-bottom: 1rem;">My contributions</h2>
+	
 	<div class="card p-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center mt-8">
 		<button type="button" class="btn-icon variant-filled hidden sm:inline-flex" on:click={carouselLeft}>
 			<ArrowLeft />
@@ -110,6 +119,7 @@
 					loading="lazy"
 					on:load={onImageLoad}
 				/>			
+				
 			{/each}
 		</div>
 
@@ -117,14 +127,22 @@
 			<ArrowRight />
 		</button>
 	</div>
-
-	<div class="card p-2 grid grid-cols-1 gap-1 mt-4">
-		<ul class="list-disc list-inside">
+<div class="card p-2 grid grid-cols-1 gap-1 mt-4">
+	<div class="grid grid-cols-3 gap-4 items-start">
+		<ul class="list-disc list-inside col-span-2">
 			{#each images[currentIndex].description as desc}
 				<li class="text-base mt-3 hanging-indent">{desc}</li>
 			{/each}
 		</ul>
+		<div class="logo-cloud">
+			<a class="logo-item flex flex-col items-center text-sm" href="https://www.youtube.com/watch?v=qLfPS_FsDyc">
+				<Youtube />
+				<span>Click here for demo</span>
+			</a>
+		</div>
 	</div>
+</div>
+
 
 	<br />
 </div>

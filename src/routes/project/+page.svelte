@@ -4,40 +4,81 @@
     import { assets } from '$app/paths';
     import { base } from '$app/paths';
     import { TabGroup, Tab } from '@skeletonlabs/skeleton';
+    import { AppRail, AppRailTile, AppRailAnchor } from '@skeletonlabs/skeleton';
     import { page } from '$app/stores';
 
     let ready = false;
     let ready1 = false;
+    let ready2 = false;
+    let readya = false;
+    let readyb = false;
+    let readyc = false;
     let ready_overall = false;
-    let tabSet: number;
+    
+    let tabSet: number=0;
+    let tabSet1: number=0;
     let selectedTools: string[] = ["Power BI"];
 
     onMount(() => {
         setTimeout(() => {
             ready = true;
             ready1 = true;
+            ready2 = true;
+            readya = true;
+            readyb = true;
+            readyc = true;
             ready_overall = true;
         }, 500); 
     });
 
     $: {
         if (tabSet === 0) {
-            ready1 = false;
+            ready1 = ready2 = false;
 			selectedTools = ["Power BI"];
             setTimeout(() => {
                 ready = true;
             }, 510);
+
         } else if (tabSet === 1) {
-            ready = false;
+            ready = ready2 = false;
             setTimeout(() => {
                 ready1 = true;
+            }, 510);
+        }
+
+        else if (tabSet === 2) {
+            ready = ready1 = false;
+            setTimeout(() => {
+                ready2 = true;
+            }, 510);
+        }
+
+        if (tabSet1 === 0) {
+            readyb =readyc= false;
+			selectedTools = ["Power BI"];
+            setTimeout(() => {
+                readya = true;
+            }, 510);
+
+        } else if (tabSet1 === 1) {
+            readya = readyc = false;
+            setTimeout(() => {
+                readyb = true;
+            }, 510);
+        }
+
+        else if (tabSet1 === 2) {
+            readya = readyb = false;
+            setTimeout(() => {
+                readyc = true;
             }, 510);
         }
     }
 
     afterUpdate(() => {
-        if (ready) {
-            tabSet = 0;
+        if (ready && readya && tabSet !== 2) {
+        tabSet = 0;
+        tabSet1 = 0;
         }
     });
 
@@ -51,56 +92,70 @@
 <style>
     .select-wrapper {
         position: absolute;
-        top: 25%; /* Adjust top positioning as needed */
-        left: 0;
-        width: 100%;
+        margin-top: -24%; /* Adjust top positioning as needed */
+        margin-left: 5%;
+        width: 120%;
         height: auto; /* Auto height to fit options */
-        overflow-y: hidden; /* Hide any overflow, including scrollbars */
+        overflow-y: auto; /* Hide any overflow, including scrollbars */
     }
 
     .select {
         width: 100%;
-        height: auto; /* Auto height to fit options */
-        padding: 10px;
+        height: 250px; /* Auto height to fit options */
+        padding: 25px;
         background-color: transparent; /* Make background transparent */
         color: white; /* Text color */
         border: none; /* Remove border */
-        font-size: 16px; /* Adjust font size as needed */
+        font-size: 23px; /* Adjust font size as needed */
         appearance: none; /* Remove default appearance */
         outline: none; /* Remove outline on focus */
         scrollbar-width: none; /* Firefox specific: hide scrollbar */
         -ms-overflow-style: none; /* IE and Edge specific: hide scrollbar */
+        
     }
 
     .select option {
+        margin: 15px 0;
         background-color: rgba(23, 23, 23, 0.5); /* Semi-transparent background for options */
     }
 </style>
 
 {#if ready_overall}
 <TabGroup justify="justify-center">
-    <div in:fly={{x:-50, duration: 500, delay: 200}} out:fly={{x:-50, duration: 200}} style="display: flex;">
-        <Tab bind:group={tabSet} name="tab1" value={0} class="text-white">Dashboard</Tab>
-        <Tab bind:group={tabSet} name="tab2" value={1} class="text-white">Hackathon</Tab>
-    </div>
+    <div style="display: flex; flex-direction: column;">
+        <div in:fly={{x:-50, duration: 500, delay: 200}} out:fly={{x:-50, duration: 200}} style="display: flex;">
+            <Tab bind:group={tabSet} name="tab1" value={0} class="text-white">Dashboard</Tab>
+            <Tab bind:group={tabSet} name="tab3" value={2} class="text-white">Python</Tab>
+            <Tab bind:group={tabSet} name="tab2" value={1} class="text-white">Hackathon</Tab>
+        </div>
+        {#if tabSet === 0 && ready}    
+            <div in:fly={{x:-50, duration: 500, delay: 200}} out:fly={{x:-50, duration: 200}} style="display: flex; margin-left: 9px; font-weight: bold;">
+                <Tab bind:group={tabSet1} name="tab1" value={0} class="text-white">Power BI</Tab>
+                <Tab bind:group={tabSet1} name="tab3" value={1} class="text-white">Tableau</Tab>
+                <Tab bind:group={tabSet1} name="tab2" value={2} class="text-white">Excel</Tab>
+            </div>
+        {/if}
+    </div>  
 
     <svelte:fragment slot="panel">
-        {#if tabSet === 0 && ready}
-        <div class="fixed left-0 top-1/5 transform -translate-y-1/2 w-40">
-            <div class="select-wrapper">
-				<select class="select" size="3" on:change={handleChange}>
-					<option value="Power BI" selected>Power BI</option>
-					<option value="Tableau">Tableau</option>
-					<option value="Excel">Excel</option>
-				</select>
-			</div>
-        </div>
-        {/if}
+        <!-- <div style="font-family: Calibri;">
+            {#if tabSet === 0 && ready}
+            <div class="fixed left-0 transform -translate-y-1/2 w-40">
+                <div class="select-wrapper">
+                    <select class="select" size="3" on:change={handleChange}>
+                        <option in:fly={{ x: -70, duration: 1800, delay: 500 }} value="Power BI" selected>Power BI</option>
+                        <option in:fly={{ x: -70, duration: 1800, delay: 500 }} value="Tableau">Tableau</option>
+                        <option in:fly={{ x: -70, duration: 1800, delay: 500 }} value="Excel">Excel</option>
+                    </select>
+                </div>
+            </div>
+            {/if}
+        </div> -->
 
         {#if tabSet === 0 && ready}
             <div in:fly={{x:-50, duration: 500, delay: 200}} out:fly={{x:-50, duration: 500}}>
                 <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 sm:mx-64 pb-48 mx-8 mt-20">
-                    {#if selectedTools.includes('Power BI')}
+                    {#if tabSet1 === 0 && readya}
                         <div class="card card-hover overflow-hidden">
                             <header>
                                 <img src={`${assets}/images/spotify.jpg`} alt="Spotify Dashboard" class="inset-0 w-full h-full object-cover"/>
@@ -146,7 +201,7 @@
 							</div>
 						</div>
                     {/if}
-					{#if selectedTools.includes("Tableau")}
+					{#if tabSet1 === 1 && readyb}
 						<div class="card card-hover overflow-hidden">
 							<header>
 								<img
@@ -194,39 +249,39 @@
 							</div>
 						</div>
 					{/if}
-					{#if selectedTools.includes("Excel")}
-					<div class="card card-hover overflow-hidden">
-						<header>
-							<img
-								src={`${assets}/images/excel_coffee_dashboard.png`}
-								alt="Landing Page"
-								class="inset-0 w-full h-full object-cover"
-							/>
-						</header>
-						<div class="p-4 space-y-4">
-							<h3 class="h3">Coffee Sales Dashboard</h3>
-							<article>
-								<ul class="list-disc pl-5 space-y-2">
-									<li class="text-sm">
-										Data preparation and cleaning in Excel to ensure consistency and accuracy
-									</li>
-									<li class="text-sm">
-										Utilised pivot tables for visualisation of data, allowing dynamic updates as filters changes
-									</li>
-									<li class="text-sm">
-										Adding slicers for easy filtering and data segmentation, and using timeline to filter specific date ranges.
-									</li>
-									<li class="anchor text-sm font-bold">
-										Advanced Excel Formulas used: XLOOKUP, INDEX, MATCH, IFERROR, etc
-									</li>
-							</article>
-						</div>
-					</div>
+					{#if tabSet1 === 2 && readyc}
+                        <div class="card card-hover overflow-hidden">
+                            <header>
+                                <img
+                                    src={`${assets}/images/excel_coffee_dashboard.png`}
+                                    alt="Landing Page"
+                                    class="inset-0 w-full h-full object-cover"
+                                />
+                            </header>
+                            <div class="p-4 space-y-4">
+                                <h3 class="h3">Coffee Sales Dashboard</h3>
+                                <article>
+                                    <ul class="list-disc pl-5 space-y-2">
+                                        <li class="text-sm">
+                                            Data preparation and cleaning in Excel to ensure consistency and accuracy
+                                        </li>
+                                        <li class="text-sm">
+                                            Utilised pivot tables for visualisation of data, allowing dynamic updates as filters changes
+                                        </li>
+                                        <li class="text-sm">
+                                            Adding slicers for easy filtering and data segmentation, and using timeline to filter specific date ranges.
+                                        </li>
+                                        <li class="anchor text-sm font-bold">
+                                            Advanced Excel Formulas used: XLOOKUP, INDEX, MATCH, IFERROR, etc
+                                        </li>
+                                </article>
+                            </div>
+                        </div>
 					{/if}
                 </div>
             </div>
         {:else if tabSet === 1 && ready1}
-            <div class="grid gap-4 grid-cols-2 sm:grid-cols-2 justify-center sm:mx-64 pb-64 mx-4 mt-4">
+            <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 justify-center sm:mx-64 pb-64 mx-auto px-4 mt-4">
                 <div class="card card-hover overflow-hidden">
                     <a href="{`${base}/project/hackathon`}" in:fly={{x:-50, duration: 500 }} out:fly={{x:-50, duration: 500, delay: 200 }}>
                         <header>
@@ -250,8 +305,10 @@
                     </a>
                 </div>
             </div>
-        {:else if tabSet === 2 && ready1}
-            (tab panel 3 contents)
+        {:else if tabSet === 2 && ready2}
+            <h1 class="font-bold text-5xl flex items-center justify-center h-screen">
+                Coming Soon
+            </h1>
         {/if}
     </svelte:fragment>
 </TabGroup>
