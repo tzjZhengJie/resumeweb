@@ -128,13 +128,15 @@
             <Tab bind:group={tabSet} name="tab3" value={2} class="text-white">Python</Tab>
             <Tab bind:group={tabSet} name="tab2" value={1} class="text-white">Hackathon</Tab>
         </div>
-        {#if tabSet === 0 && ready}    
-            <div in:fly={{x:-50, duration: 500, delay: 200}} out:fly={{x:-50, duration: 200}} style="display: flex; margin-left: 9px; font-weight: bold;">
-                <Tab bind:group={tabSet1} name="tab1" value={0} class="text-white">Power BI</Tab>
-                <Tab bind:group={tabSet1} name="tab3" value={1} class="text-white">Tableau</Tab>
-                <Tab bind:group={tabSet1} name="tab2" value={2} class="text-white">Excel</Tab>
-            </div>
-        {/if}
+        <div in:fly={{x:50, duration: 700, delay: 500}} out:fly={{x:-50, duration: 200}} style="display: flex; margin-left: 9px; font-weight: bold;">
+            {#if tabSet === 0 && ready}    
+                <!-- <div in:fly={{x:-50, duration: 500, delay: 200}} out:fly={{x:-50, duration: 200}} style="display: flex; margin-left: 9px; font-weight: bold;"> -->
+                    <Tab bind:group={tabSet1} name="tab1" value={0} class="text-white">Power BI</Tab>
+                    <Tab bind:group={tabSet1} name="tab3" value={1} class="text-white">Tableau</Tab>
+                    <Tab bind:group={tabSet1} name="tab2" value={2} class="text-white">Excel</Tab>
+                <!-- </div> -->
+            {/if}
+        </div>
     </div>  
 
     <svelte:fragment slot="panel">
