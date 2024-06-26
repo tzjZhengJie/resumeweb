@@ -15,7 +15,7 @@
     let readyc = false;
     let ready_overall = false;
     
-    let tabSet: number=0;
+    let tabSet: number=2;
     let tabSet1: number=0;
     let selectedTools: string[] = ["Power BI"];
 
@@ -124,8 +124,8 @@
 <TabGroup justify="justify-center">
     <div style="display: flex; flex-direction: column;">
         <div in:fly={{x:-50, duration: 500, delay: 200}} out:fly={{x:-50, duration: 200}} style="display: flex;">
-            <Tab bind:group={tabSet} name="tab1" value={0} class="text-white">Dashboard</Tab>
             <Tab bind:group={tabSet} name="tab3" value={2} class="text-white">Python</Tab>
+            <Tab bind:group={tabSet} name="tab1" value={0} class="text-white">Dashboard</Tab>
             <Tab bind:group={tabSet} name="tab2" value={1} class="text-white">Hackathon</Tab>
         </div>
         <div in:fly={{x:50, duration: 700, delay: 500}} out:fly={{x:-50, duration: 200}} style="display: flex; margin-left: 9px; font-weight: bold;">
@@ -140,20 +140,6 @@
     </div>  
 
     <svelte:fragment slot="panel">
-        <!-- <div style="font-family: Calibri;">
-            {#if tabSet === 0 && ready}
-            <div class="fixed left-0 transform -translate-y-1/2 w-40">
-                <div class="select-wrapper">
-                    <select class="select" size="3" on:change={handleChange}>
-                        <option in:fly={{ x: -70, duration: 1800, delay: 500 }} value="Power BI" selected>Power BI</option>
-                        <option in:fly={{ x: -70, duration: 1800, delay: 500 }} value="Tableau">Tableau</option>
-                        <option in:fly={{ x: -70, duration: 1800, delay: 500 }} value="Excel">Excel</option>
-                    </select>
-                </div>
-            </div>
-            {/if}
-        </div> -->
-
         {#if tabSet === 0 && ready}
             <div in:fly={{x:-50, duration: 500, delay: 200}} out:fly={{x:-50, duration: 500}}>
                 <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 sm:mx-64 pb-48 mx-8 mt-20">
@@ -308,9 +294,29 @@
                 </div>
             </div>
         {:else if tabSet === 2 && ready2}
-            <h1 class="font-bold text-5xl flex items-center justify-center h-screen">
-                Coming Soon
-            </h1>
+            <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 justify-center sm:mx-64 pb-64 mx-auto px-4 mt-4">
+                <div class="card card-hover overflow-hidden">
+                    <a href="{`${base}/project/crimerate`}" in:fly={{x:-50, duration: 500 }} out:fly={{x:-50, duration: 500, delay: 200 }}>
+                        <header>
+                            <img src={`${assets}/images/graph.png`} alt="Landing Page" class="inset-0 w-full h-80 object-cover"/>
+                        </header>
+                        <div class="p-4 space-y-4">
+                            <h3 class="h3">Assault rate statistical analysis</h3>
+                            <ul class="list-disc pl-5 space-y-2 mt-10">
+                                <article>Categorising groups based on characteristics, and the statistical significant for prediction</article>
+                                <p>&nbsp;</p>
+                                <p class=" anchor text-sm text-white-500 italic">Click here for more info</p>
+                            </ul>
+                        </div>
+                        <hr class="opacity-50"/>
+                        <footer class="p-4 card-footer flex justify-start items-center space-x-4">
+                            <div class="flex-auto flex justify-between items-center">
+                                <small>2024</small>
+                            </div>
+                        </footer>
+                    </a>
+                </div>
+            </div>
         {/if}
     </svelte:fragment>
 </TabGroup>
