@@ -10,9 +10,9 @@
 	} from 'lucide-svelte';
 </script>
 
-<div class="relative h-screen" style="padding-top: 5px; padding-bottom: 500px;">
+<div class="relative" style="padding-top: 5px; padding-bottom: 200px;">
                 <div class="absolute" style="top: 0; left: 50%; transform: translateX(-50%); width: calc(100% - 200px); height: 450px; overflow: hidden;">
-                    <img src="{assets}/images/graph.png" alt="graph" style="width: 100%; object-fit: cover;">
+                    <img src="{assets}/images/graph.png" alt="graph" style="width: 100%; object-fit: cover; border: 3px solid #000;">
                 </div>
                 
                 <div class="flex flex-col items-center justify-center" style="padding-top: 460px; padding-left: 95px; padding-right: 95px;">
