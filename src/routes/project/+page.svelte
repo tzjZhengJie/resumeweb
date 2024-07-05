@@ -28,7 +28,7 @@
             readyb = true;
             readyc = true;
             ready_overall = true;
-        }, 500); 
+        }, 700); 
     });
 
     $: {
