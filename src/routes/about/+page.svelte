@@ -580,7 +580,7 @@
 				<!-- <p class="text-lg justify mt-2">Storytelling, Critical Thinking, Problem Solving</p>
 				<h1 class="text-sm softskill mt-2">SQL, Python, Statistic, Machine Learning</h1> -->
 				<div class="flex justify-left items-center mt-8">
-					<a class="anchor" href={`${assets}/Tan Zheng Jie Resume.pdf`}>Download a copy of my CV</a>
+					<a class="anchor" href={`${assets}/Zheng Jie Resume.pdf`}>Download a copy of my CV</a>
 				</div>
 				<div class="my-16">&nbsp</div>
 			</div>
