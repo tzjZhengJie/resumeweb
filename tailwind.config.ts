@@ -12,6 +12,13 @@ export default {
 		join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')
 	],
 	theme: {
+		screens: {
+			'mobile': '375px',
+			'tablet': '768px',
+			'laptop': '1024px',
+			'desktop': '1280px',
+			'xl-desktop': '1536px'
+		},
 		extend: {}
 	},
 	plugins: [

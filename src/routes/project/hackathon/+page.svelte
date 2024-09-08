@@ -100,13 +100,13 @@
 }
 </style>
 
-<div class="container w-2/4 mx-auto">
+<div class="container mx-auto">
 
 	<!-- <a href="{`${base}`}" class="btn-icon variant-filled"><Home /></a> -->
-	<h2 class="text-4xl text-white font-bold" style="margin-bottom: 1rem;">My contributions</h2>
+	<h2 class="text-4xl text-white font-bold">My contributions</h2>
 	
 	<div class="card p-4 grid grid-cols-[auto_1fr_auto] gap-4 items-center mt-8">
-		<button type="button" class="btn-icon variant-filled hidden sm:inline-flex" on:click={carouselLeft}>
+		<button type="button" class="btn-icon variant-filled hidden mobile:inline-flex" on:click={carouselLeft}>
 			<ArrowLeft />
 		</button>
 
@@ -127,8 +127,8 @@
 			<ArrowRight />
 		</button>
 	</div>
-<div class="card p-2 grid grid-cols-1 gap-1 mt-4">
-	<div class="grid grid-cols-3 gap-4 items-start">
+<div class="card p-2 mt-4">
+	<div class="flex gap-4 justify-evenly">
 		<ul class="list-disc list-inside col-span-2">
 			{#each images[currentIndex].description as desc}
 				<li class="text-base mt-3 hanging-indent">{desc}</li>

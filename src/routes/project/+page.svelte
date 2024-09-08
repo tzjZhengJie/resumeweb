@@ -96,7 +96,7 @@
             <div in:fade={{duration: 600, delay: 100}} out:fly={{ x: -50, duration: 500, delay: 100 }}>
                 {#key tabSet1}    
                 <div in:fade={{duration: 300, delay: 700}} out:fly={{ x: -50, duration: 500, delay: 100 }}>
-                    <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 sm:mx-64 pb-48 mx-8 mt-20">
+                    <div class="grid gap-4 desktop:grid-cols-2 laptop:grid-cols-2 pb-48 mx-8 mt-20">
                         {#if tabSet1 === 0 && readya}
                             <div class="card card-hover overflow-hidden">
                                 <header>
@@ -185,7 +185,7 @@
                 {/key}
             </div>
             {:else if tabSet === 1 && ready1}
-                <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 justify-center sm:mx-64 pb-64 mx-auto px-4 mt-4">
+                <div class="grid gap-4 laptop:grid-cols-2 desktop:grid-cols-2 justify-center pb-64 mx-auto px-4 mt-4">
                     <div class="card card-hover overflow-hidden">
                         <a href="{`${base}/project/hackathon`}" in:fly={{ x: -50, duration: 500 }} out:fly={{ x: -50, duration: 500, delay: 100 }}>
                             <header>
@@ -210,7 +210,7 @@
                     </div>
                 </div>
             {:else if tabSet === 2 && ready2}
-                <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 justify-center sm:mx-64 pb-64 mx-auto px-4 mt-4">
+                <div class="grid gap-4 laptop:grid-cols-2 desktop:grid-cols-2 justify-center pb-64 mx-auto px-4 mt-4">
                     <div class="card card-hover overflow-hidden">
                         <a href="{`${base}/project/crimerate`}" in:fly={{ x: -50, duration: 500 }} out:fly={{ x: -50, duration: 500, delay: 100 }}>
                             <header>

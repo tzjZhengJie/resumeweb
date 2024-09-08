@@ -23,14 +23,14 @@
 </style>
 
 {#if ready}
-<div class="relative text-white flex items-center justify-center h-full px-4 sm:px-0">
+<div class="relative text-white flex items-center justify-center h-full px-4 phone:px-0">
 	<div class="relative z-10 text-start">
 		<div class="text-start">
 			<div in:typewriter={{ speed: 10 }}>
 				
-				<div class="flex item-center">
+				<div class="tablet:flex laptop:flex desktop:flex tablet:gap-4 laptop:gap-4 desktop:gap-4">
 					<Avatar
-						class="mr-4"
+						class="mx-auto"
 						src={`${assets}/me.jpg`}
 						width="w-40"
 						border="border-4 border-surface-300-600-token hover:!border-primary-500"
@@ -38,12 +38,12 @@
 					/>
 					<div class="flex-col">
 						<div class="mt-6">
-							<h1 class="text-4xl sm:text-4xl font-bold">Zheng Jie</h1>
-							<p class="text-3x1 sm:text-3x1 mt-2">
+							<h1 class="text-4xl phone:text-4xl font-bold">Zheng Jie</h1>
+							<p class="text-3x1 phone:text-3x1 mt-2">
 								I'm a data analyst with a passion for data-driven decision-making and problem-solving.
 							</p>
 						</div>
-						<div class="flex flex-col items-center sm:flex-row text-xs sm:text-sm mt-2">
+						<div class="flex justify-center text-xs sm:text-sm mt-4">
 							<a
 								transition:fly={{ y: 50, duration: 1800, delay: 350 }}
 								class={links}
@@ -51,6 +51,7 @@
 							>
 								<Linkedin />&nbsp;LinkedIn
 							</a>
+							<div class="mx-3"></div>
 							<a
 								transition:fly={{ y: 50, duration: 1800, delay: 450 }}
 								class={links}
@@ -58,6 +59,7 @@
 							>
 								<Github />&nbsp;Github
 							</a>
+							<div class="mx-3"></div>
 							<a
 								transition:fly={{ y: 50, duration: 1800, delay: 550 }}
 								class={links}
