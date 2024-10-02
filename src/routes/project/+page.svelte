@@ -74,7 +74,7 @@
 
 {#if ready_overall}
 <TabGroup justify="justify-center">
-    <div style="display: flex; flex-direction: column;">
+    <div  style="display: flex; flex-direction: column;">
         <div in:fly={{ x: -50, duration: 200, delay: 200 }} out:fly={{ x: -50, duration: 200 }} style="display: flex;">
             <Tab bind:group={tabSet} name="tab3" value={2} class="text-white">Python</Tab>
             <Tab bind:group={tabSet} name="tab1" value={0} class="text-white">Dashboard</Tab>

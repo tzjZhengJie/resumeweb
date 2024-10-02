@@ -8,7 +8,7 @@
 </script>
 
 <div class="overflow-y-auto">
-	<TabGroup
+	<!-- <TabGroup
 		justify="justify-center"
 		active="bg-gradient-to-br variant-gradient-warning-success text-surface-600 dark:text-white"
 		hover="hover:bg-gradient-to-br variant-gradient-warning-success text-surface-600 opacity-60 dark:text-white"
@@ -16,15 +16,15 @@
 		rounded="rounded-lg"
 		border="border-0 rounded-lg outline outline-offset-2 outline-primary-500"
 		class="text-surface-600-300-token rounded-lg fixed z-50 -translate-x-1/2 bottom-10 left-1/2 bg-surface-300-600-token w-auto"
-	>
-		<TabAnchor class="small-tab" href="{base}" selected={$page.url.pathname === base}>
+	> -->
+		<!-- <TabAnchor class="small-tab" href="{base}" selected={$page.url.pathname === base}>
 			<svelte:fragment slot="lead">
 				<div class={nav}>
 					<Home />
 					<span class="hidden md:inline">Home</span>
 				</div>
 			</svelte:fragment>
-		</TabAnchor>
+		</TabAnchor> -->
 		<!-- <TabAnchor class="small-tab" href="/" selected={$page.url.pathname === '/'}>
 			<svelte:fragment slot="lead">
 				<div class={nav}>
@@ -33,7 +33,7 @@
 				</div>
 			</svelte:fragment>
 		</TabAnchor> -->
-		<span class="mx-2"></span>
+		<!-- <span class="mx-2"></span>
 		<TabAnchor class="small-tab" href="{`${base}/project`}" selected={$page.url.pathname === `${base}/project`}>
 			<svelte:fragment slot="lead">
 				<div class={nav}>
@@ -51,7 +51,7 @@
 				</div>
 			</svelte:fragment>
 		</TabAnchor>
-	</TabGroup>
+	</TabGroup> -->
 </div>
 
 <style>

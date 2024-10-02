@@ -40,8 +40,9 @@
 						<div class="mt-6">
 							<h1 class="text-4xl phone:text-4xl font-bold">Zheng Jie</h1>
 							<p class="text-3x1 phone:text-3x1 mt-2">
-								I'm a data analyst with a passion for data-driven decision-making and problem-solving.
+								Visit <a href="https://www.chriszj.com"> Chriszj.com </a>for updated portfolio website!
 							</p>
+						
 						</div>
 						<div class="flex justify-center text-xs sm:text-sm mt-4">
 							<a
